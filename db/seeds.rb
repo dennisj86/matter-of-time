@@ -79,3 +79,32 @@ offer_3 = {
 }
 
 puts "Creating requests..."
+
+request_1 = {
+  category: 'Music',
+  title: "Looking for Beginner Piano Lessons",
+  description: 'I have a 5 year old daughter that wants to learn the piano.',
+  offer_request: 1,
+  user_id: john.id
+}
+
+request_2 = {
+  category: 'Handywork',
+  title: "Our flat is a mess",
+  description: 'We are 4 mamaboi-students sharing a flat and need help keeping our cave tidy.',
+  offer_request: 1,
+  user_id: johannes.id
+}
+
+request_3 = {
+  category: 'Education',
+  title: "Looking for help with homeschooling",
+  description: 'My 14 year-old son needs help with homeschooling in math and physics during lockdown',
+  offer_request: 1,
+  user_id: thomas.id
+}
+
+[request_1, request_2, request_3].each { |request|
+  market = Market.create!(request)
+  puts "Created #{market.title}"
+}
