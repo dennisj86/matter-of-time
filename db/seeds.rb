@@ -9,42 +9,42 @@
 puts "Cleaning database..."
 Market.destroy_all
 User.destroy_all
-admin = {
+
+admin = User.create(
   email: "admin@admin.com",
   password: '123456'
-}
+)
+puts "Created #{admin.email}"
 
-john = {
+john = User.create(
   email: "john@smith.com",
   password: '123456'
-}
+)
+puts "Created #{john.email}"
 
-james = {
+james = User.create(
   email: "james@bond.com",
   password: '123456'
-}
+)
+puts "Created #{james.email}"
 
-steven = {
+steven = User.create(
   email: "steven@seagull.com",
   password: '123456'
-}
+)
+puts "Created #{steven.email}"
 
-johannes = {
+johannes = User.create(
   email: "johannes@berger.com",
   password: '123456'
-}
+)
+puts "Created #{johannes.email}"
 
-thomas = {
+thomas = User.create(
   email: "thomas@mueller.com",
   password: '123456'
-}
-
-[admin, john, james, steven, johannes, thomas].each { |user|
-  user = User.create!(user)
-  puts "Created #{user.email}"
-}
-#admins = User.create!(admin)
-#puts "Created #{admins.email}"
+)
+puts "Created #{thomas.email}"
 
 
 puts "Creating offers..."
