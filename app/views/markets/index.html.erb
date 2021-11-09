@@ -1,0 +1,12 @@
+<% if policy(Market).create? %>
+  <%= link_to "New offer/request", new_market_path %>
+<% end %>
+
+<% @markets.each do |market| %>
+  <% if policy(market).edit? %>
+    <%= link_to "Update", edit_market_path(market) %>
+  <% end %>
+<% end %>
+
+<h1>Markets#index</h1>
+<p>Find me in app/views/markets/index.html.erb</p>
