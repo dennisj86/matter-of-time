@@ -13,14 +13,17 @@
 
 .btn-line-red {
   color: $red-orange;
-  padding: 8px 24px;
-  border-radius: 20px;
+  text-align: center;
+  padding: 4px 20px;
+  border-radius: 18px;
   font-weight: bold;
   background-color: white;
   border-color: $red-orange;
-  border: solid 2px;
+  border-style: solid;
+  border: 0.5;
 }
 
 .btn-line-red:hover {
   text-decoration: none;
+  color: $red-orange;
 }
