@@ -1,0 +1,26 @@
+.btn-solid-red {
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: $red-orange;
+  color: white;
+}
+
+.btn-solid-red:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.btn-line-red {
+  color: $red-orange;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: white;
+  border-color: $red-orange;
+  border: solid 2px;
+}
+
+.btn-line-red:hover {
+  text-decoration: none;
+}
