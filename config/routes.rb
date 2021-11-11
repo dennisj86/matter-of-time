@@ -7,4 +7,5 @@ Rails.application.routes.draw do
       resources :messages, only: %i[create]
     end
   end
+  resources :dashboard, only: %i[index]
 end
