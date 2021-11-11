@@ -9,6 +9,8 @@
 }
 
 .navbar-lewagon {
+  justify-content: space-between;
+  display: flex;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.5);
 //  backdrop-filter: blur(26.182899475097656px) brightness(99.63891598582268%);

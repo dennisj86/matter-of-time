@@ -1,24 +1,17 @@
-<div class="container">
+<div class="container mt-5">
 
-<% if policy(Market).create? %>
-  <%= link_to "New offer/request", new_market_path %>
-<% end %>
+  <h1 class="text-center">Overview</h1>
 
-<% @markets.each do |market| %>
-  <% if policy(market).edit? %>
-    <%= link_to "Update", edit_market_path(market) %>
-  <% end %>
-<% end %>
+  <div class="d-flex justify-content-center">
 
-<h1>Overview</h1>
+    <div class="filter">
+      <h4>Filter by category:</h4>
+        <%= form_tag markets_path, method: :get do %>
+          <%= select_tag :category, options_for_select(['', 'Animals','Music','Plants', 'Handywork', 'Concerts', 'Transportation', 'Crafts', 'Sports', 'Education', 'Circus', 'Film & Photography', 'Baking & Cooking']) %>
+        <%= submit_tag "Filter", class: "btn-solid-red" %>
+      <% end %>
+    </div>
 
-<%# search form %>
-  <div class="filter">
-    <h4>Filter by category:</h4>
-      <%= form_tag markets_path, method: :get do %>
-        <%= select_tag :category, options_for_select(['', 'Animals','Music','Plants', 'Handywork', 'Concerts', 'Transportation', 'Crafts', 'Sports', 'Education', 'Circus', 'Film & Photography', 'Baking & Cooking']) %>
-      <%= submit_tag "Filter", class: "btn-gradient-orange-small" %>
-    <% end %>
   </div>
 </div>
 
@@ -41,3 +34,14 @@
     <%# </div> %>
   <%# </div> %>
   <%# <% end  %>
+
+
+
+<%# For editing offers/requests  %>
+    <%# <% @markets.each do |market| %>
+      <%# <% if policy(market).edit? %>
+        <%# <%= link_to "Update", edit_market_path(market) %>
+      <%# <% end %>
+    <%# <% end %>
+
+    <%# search form %>
