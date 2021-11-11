@@ -1,3 +1,5 @@
+<div class="container">
+
 <% if policy(Market).create? %>
   <%= link_to "New offer/request", new_market_path %>
 <% end %>
@@ -8,5 +10,34 @@
   <% end %>
 <% end %>
 
-<h1>Markets#index</h1>
-<p>Find me in app/views/markets/index.html.erb</p>
+<h1>Overview</h1>
+
+<%# search form %>
+  <div class="filter">
+    <h4>Filter by category:</h4>
+      <%= form_tag markets_path, method: :get do %>
+        <%= select_tag :category, options_for_select(['', 'Animals','Music','Plants', 'Handywork', 'Concerts', 'Transportation', 'Crafts', 'Sports', 'Education', 'Circus', 'Film & Photography', 'Baking & Cooking']) %>
+      <%= submit_tag "Filter", class: "btn-gradient-orange-small" %>
+    <% end %>
+  </div>
+</div>
+
+  <%# <% @markets.each do |market|  %>
+  <%# <div class="card-product">
+
+    <% if market.photo.attached? %>
+      <%# <%= cl_image_tag(market.photo.key, width: 400, height: 300, crop: :fill) %>
+    <%# <% elsif market.avatar? %>
+      <%# <%= image_tag(market.avatar, width: 400, height: 300, crop: :fill)  %>
+    <%# <% end %>
+    <%# <div class="card-location"> %>
+      <%# <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a> %>
+    <%# </div> %>
+    <%# <div class="card-product-infos"> %>
+      <%# <%= link_to market.title, market_path(market), class:"" %>
+      <%# <br> %>
+    <%# <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem et nesciunt sapiente repellat facilis sed explicabo eligendi mollitia deleniti cum quasi incidunt, consequatur at commodi fugit? Inventore beatae error hic.</p> %>
+      <%# <%= link_to "See more >", market_path(market) %>
+    <%# </div> %>
+  <%# </div> %>
+  <%# <% end  %>

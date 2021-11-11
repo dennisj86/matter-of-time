@@ -1,5 +1,5 @@
 class MarketsController < ApplicationController
-  authorize @market
+  #authorize @market
 
   def index
     @markets = policy_scope(Market).order(created_at: :desc)
