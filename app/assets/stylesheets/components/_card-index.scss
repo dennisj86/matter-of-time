@@ -1,0 +1,91 @@
+.card-index {
+  overflow: hidden;
+  height: 400px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: top;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.card-index img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-index h2 {
+  font-size: 22px;
+  margin-bottom: 4px;
+  color: $orange;
+}
+
+.card-index h3 {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 12px;
+  color: $green;
+}
+
+.card-index h4 {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 12px;
+  color: $red;
+}
+
+.card-index p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-index a {
+  color: $orange;
+}
+
+.card-index a:hover {
+  color: $orange;
+}
+
+.card-index .card-index-infos {
+  padding: 16px;
+  width: 600px;
+}
+
+.offer-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: $orange;
+}
+
+.offer-location {
+  position: relative;
+  left: 870px;
+}
+
+.offer-creating {
+  text-align: center;
+
+}
+
+.offer-creating h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: $orange;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+}

@@ -13,17 +13,27 @@ class MarketsController < ApplicationController
   end
 
   def new
+    @market = Market.new
   end
 
   def create
-    authorize @market
+    #authorize @market
+    @market = Market.new(market_params)
+    @market.user = current_user
+    @market.save
+
+    if @market.save
+      redirect_to market_path(@market.id)
+    else
+      render :new
+    end
   end
 
   def update
-
   end
 
   def show
+    @market = Market.find(params[:id])
   end
 
 

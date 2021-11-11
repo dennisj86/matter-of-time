@@ -3,7 +3,7 @@
   <h1 class="text-center">Overview</h1>
 
   <div class="d-flex justify-content-center">
-
+    <%# search form %>
     <div class="filter">
       <h4>Filter by category:</h4>
         <%= form_tag markets_path, method: :get do %>
@@ -15,25 +15,27 @@
   </div>
 </div>
 
-  <%# <% @markets.each do |market|  %>
-  <%# <div class="card-product">
+<div class="flexbox">
+  <% @markets.each do |market| %>
+  <div class="card-index">
 
-    <% if market.photo.attached? %>
-      <%# <%= cl_image_tag(market.photo.key, width: 400, height: 300, crop: :fill) %>
-    <%# <% elsif market.avatar? %>
-      <%# <%= image_tag(market.avatar, width: 400, height: 300, crop: :fill)  %>
-    <%# <% end %>
+    <%# if market.photo.attached? %>
+      <%#= cl_image_tag(market.photo.key, width: 400, height: 300, crop: :fill) %>
+    <%# elsif market.avatar? %>
+      <%#= image_tag(market.avatar, width: 400, height: 300, crop: :fill)  %>
+    <%# end %>
     <%# <div class="card-location"> %>
-      <%# <a href="#"><i class="fas fa-map-marker-alt"></i>  0.3 km</a> %>
+      <%# <a href="#"><i class="fas FA-map-marker-alt"></i>  0.3 km</a> %>
     <%# </div> %>
-    <%# <div class="card-product-infos"> %>
-      <%# <%= link_to market.title, market_path(market), class:"" %>
-      <%# <br> %>
-    <%# <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem et nesciunt sapiente repellat facilis sed explicabo eligendi mollitia deleniti cum quasi incidunt, consequatur at commodi fugit? Inventore beatae error hic.</p> %>
-      <%# <%= link_to "See more >", market_path(market) %>
-    <%# </div> %>
-  <%# </div> %>
-  <%# <% end  %>
+    <div class="card-index-infos">
+      <h2><%= link_to market.title, market_path(market) %></h2>
+      <br>
+    <p><%= market.description %></p>
+      <%= button_to "See Details", market_path(market), :class => "btn-solid-red", :method => :get %>
+    </div>
+  </div>
+  <% end  %>
+</div>
 
 
 
@@ -43,5 +45,3 @@
         <%# <%= link_to "Update", edit_market_path(market) %>
       <%# <% end %>
     <%# <% end %>
-
-    <%# search form %>
