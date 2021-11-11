@@ -1,6 +1,19 @@
+.navbar {
+  align-items: center;
+  height: 8vh;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1030;
+}
+
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+//  backdrop-filter: blur(26.182899475097656px) brightness(99.63891598582268%);
+//  text-decoration: none;
+//  color: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +22,17 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+.login {
+    right: 35px;
+    position: absolute;
+    top: 15px;
 }
