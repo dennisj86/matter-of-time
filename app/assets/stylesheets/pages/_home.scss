@@ -12,64 +12,12 @@ justify-content: center;
 }
 
 .banner-text {
-//  width: 80vw;
-  padding-left: 12vw;
+  width: 1000px;
 }
 
 .banner-text h1{
   color: $mid-blue;
-  font-size: 3.5rem;
-  padding-top: 70vh;
-  padding-bottom: 10vh;
-
-}
-
-.filter-links {
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.filter-container{
-  width: 60vw;
-  display: flex;
-  justify-content: space-around;
-}
-
-.banner-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.img-left {
-  background-image: url(blob-left.svg);
-  background-position: left;
-  background-size: cover;
-  height: 120vh;
-}
-
-.img-right {
-  background-image: url(blob-right.svg);
-  background-position: right;
-  background-size: cover;
-//  height: 120vh;
-}
-
-.description {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.details {
-  width: 30vw;
-  padding-bottom: 35vh;
-}
-
-.details h2 {
-  font-display: l;
-}
-
-.headline {
-  padding-top: 25vh;
-  padding-bottom: 5vh;
+  font-size: 60px;
+  padding-top: 200px;
+  padding-bottom: 25px;
 }

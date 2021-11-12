@@ -1,12 +1,47 @@
-<% if policy(Market).create? %>
-  <%= link_to "New offer/request", new_market_path %>
-<% end %>
+<div class="container mt-5">
 
-<% @markets.each do |market| %>
-  <% if policy(market).edit? %>
-    <%= link_to "Update", edit_market_path(market) %>
-  <% end %>
-<% end %>
+  <h1 class="text-center">Overview</h1>
 
-<h1>Markets#index</h1>
-<p>Find me in app/views/markets/index.html.erb</p>
+  <div class="d-flex justify-content-center">
+    <%# search form %>
+    <div class="filter">
+      <h4>Filter by category:</h4>
+        <%= form_tag markets_path, method: :get do %>
+          <%= select_tag :category, options_for_select(['', 'Animals','Music','Plants', 'Handywork', 'Concerts', 'Transportation', 'Crafts', 'Sports', 'Education', 'Circus', 'Film & Photography', 'Baking & Cooking']) %>
+        <%= submit_tag "Filter", class: "btn-solid-red" %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+
+<div class="flexbox">
+  <% @markets.each do |market| %>
+  <div class="card-index">
+
+    <%# if market.photo.attached? %>
+      <%#= cl_image_tag(market.photo.key, width: 400, height: 300, crop: :fill) %>
+    <%# elsif market.avatar? %>
+      <%#= image_tag(market.avatar, width: 400, height: 300, crop: :fill)  %>
+    <%# end %>
+    <%# <div class="card-location"> %>
+      <%# <a href="#"><i class="fas FA-map-marker-alt"></i>  0.3 km</a> %>
+    <%# </div> %>
+    <div class="card-index-infos">
+      <h2><%= link_to market.title, market_path(market) %></h2>
+      <br>
+    <p><%= market.description %></p>
+      <%= button_to "See Details", market_path(market), :class => "btn-solid-red", :method => :get %>
+    </div>
+  </div>
+  <% end  %>
+</div>
+
+
+
+<%# For editing offers/requests  %>
+    <%# <% @markets.each do |market| %>
+      <%# <% if policy(market).edit? %>
+        <%# <%= link_to "Update", edit_market_path(market) %>
+      <%# <% end %>
+    <%# <% end %>
