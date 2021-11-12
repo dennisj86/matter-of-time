@@ -8,10 +8,15 @@
   z-index: 1030;
 }
 
+.nav-link {
+  font-size: 0.75rem;
+}
+
 .navbar-lewagon {
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.5);
-//  backdrop-filter: blur(26.182899475097656px) brightness(99.63891598582268%);
+  background-color: #fffff80;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 //  text-decoration: none;
 //  color: white;
 }
@@ -21,7 +26,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 4vw;
 }
 
 .nav-list {
@@ -35,4 +40,20 @@
     right: 35px;
     position: absolute;
     top: 15px;
+}
+.login-img {
+    right: 1vw;
+    position: absolute;
+    top: 1vh;
+}
+
+.login-dd {
+    right: 1vw;
+    position: absolute;
+    top: 8vh;
+}
+
+.collapse-style {
+  border-radius: 20px;
+  background-color: $light-blue;
 }
