@@ -73,6 +73,8 @@ offer_3 = {
   user_id: james.id
 }
 
+
+
 [offer_1, offer_2, offer_3].each { |offer|
   market = Market.create!(offer)
   puts "Created #{market.title}"
@@ -101,10 +103,50 @@ request_3 = {
   title: "Looking for help with homeschooling",
   description: 'My 14 year-old son needs help with homeschooling in math and physics during lockdown',
   offer_request: 1,
-  user_id: thomas.id
+  user_id: steven.id
 }
 
 [request_1, request_2, request_3].each { |request|
   market = Market.create!(request)
   puts "Created #{market.title}"
 }
+
+booking_1 = Booking.create!(
+  user_id: john.id,
+  market_id: Market.last.id
+)
+puts "booking #{booking_1.id} created"
+
+booking_2 = Booking.create!(
+  user_id: thomas.id,
+  market_id: Market.last.id
+)
+puts "booking #{booking_2.id} created"
+
+booking_3 = Booking.create!(
+  user_id: steven.id,
+  market_id: Market.first.id
+)
+puts "booking #{booking_3.id} created"
+
+message_1 = Message.create!(
+  content: "hi!",
+  user_id: booking_1.user.id,
+  booking_id: booking_1.id
+)
+puts "message #{message_1.id} by #{message_1.user.email} created"
+
+message_2 = Message.create!(
+  content: "hi!",
+  user_id: booking_2.user.id,
+  booking_id: booking_2.id
+)
+
+puts "message #{message_2.id} by #{message_2.user.email} created"
+
+message_3 = Message.create!(
+  content: "hi, you!",
+  user_id: booking_3.user.id,
+  booking_id: booking_3.id
+)
+puts "message #{message_3.id} by #{message_3.user.email} created"

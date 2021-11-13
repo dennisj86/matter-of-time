@@ -3,11 +3,11 @@
     <%= image_tag "MOT-logo.svg" %>
   <% end %>
 
-  <div id= "menu" class="nav-list">
-    <%= link_to "Home", "#", class: "button nav-link active" %>
-    <%= link_to "Browse", "#", class: "button nav-link" %>
-    <%= link_to "Categories", "#", class: "button nav-link" %>
-    <%= link_to "How it works", "#", class: "button nav-link" %>
+  <div class="nav-list">
+    <%= link_to "Home", "/", class: "nav-link" %>
+    <%= link_to "Browse", "/market", class: "nav-link" %>
+    <%= link_to "Categories", "#", class: "nav-link" %>
+    <%= link_to "How it works", "#", class: "nav-link" %>
   </div>
 
 <%#   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Create an offer", "#", class: "dropdown-item" %>
             <%= link_to "My offers", "#", class: "dropdown-item" %>
-            <%= link_to "My profile", "#", class: "dropdown-item" %>
+            <%= link_to "My profile", "/dashboard", class: "dropdown-item" %>
             <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
