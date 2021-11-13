@@ -1,0 +1,7 @@
+<%= render 'shared/header' %>
+<div>
+<% @bookings.each do |market| %>
+<div><%= market.user.email %> <%= market.created_at %></div>
+<div> <%= market.market.title %> </div>
+<% end %>
+</div>
