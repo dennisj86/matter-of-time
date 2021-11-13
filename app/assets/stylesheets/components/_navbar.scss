@@ -58,3 +58,7 @@
   background-color: $pink;
   color: $red-orange;
 }
+
+.active .nav-link:hover {
+  color: $red-orange;
+}
