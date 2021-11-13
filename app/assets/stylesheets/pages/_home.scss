@@ -47,6 +47,12 @@ justify-content: center;
   height: 120vh;
 }
 
+.img-left-small {
+  background-image: url(blob-small.svg);
+  background-position: left;
+  background-size: cover;
+}
+
 .img-right {
   background-image: url(blob-right.svg);
   background-position: right;
@@ -70,6 +76,10 @@ justify-content: center;
 }
 
 .headline {
-  padding-top: 25vh;
-  padding-bottom: 5vh;
+  //padding-top: 25vh;
+  //padding-bottom: 5vh;
+}
+
+.headline h2 {
+  font-size: 2rem;
 }
