@@ -8,12 +8,8 @@
   z-index: 1030;
 }
 
-.nav-link {
-  font-size: 0.75rem;
-}
-
 .navbar-lewagon {
-  justify-content: space-between;
+  justify-content: flex-start;
   display: flex;
   align-items: center;
   background-color: #fffff80;
