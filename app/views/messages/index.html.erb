@@ -1,7 +1,14 @@
 <%= render 'shared/header' %>
 <div>
-<% @bookings.each do |market| %>
-<div><%= market.user.email %> <%= market.created_at %></div>
-<div> <%= market.market.title %> </div>
-<% end %>
+  <div data-controller="show-selected-message">
+    <div>
+      <% @bookings.each do |market| %>
+      <div><%= market.user.email %> <%= market.created_at %></div>
+      <div> <%= market.market.title %> </div>
+      <% end %>
+    </div>
+    <div data-show-selected-message-target="items">
+      hello
+    </div>
+  </div>
 </div>
