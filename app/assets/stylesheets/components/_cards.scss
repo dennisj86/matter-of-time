@@ -1,8 +1,11 @@
 .card-trip {
-  overflow: hidden;
   width: 19vw;
-  padding-top: 32px;
-  height: 450px;
+  padding-top: 4px;
+  height: 350px;
+  box-shadow: 0 0 0 2px #ccc;
+  border-radius: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .card-trip > img {
@@ -21,11 +24,13 @@
 }
 
 .card-trip p {
+  overflow: hidden;
   font-size: 0.8rem;
   opacity: .7;
   margin: 0;
   padding-top: 8px;
   padding-bottom: 12px;
+  text-overflow: ellipsis;
 }
 
 
@@ -46,9 +51,20 @@
 }
 
 .four-cards {
+  height: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.index-cards {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+  justify-content: center;
 }
 
 .card-btn{
