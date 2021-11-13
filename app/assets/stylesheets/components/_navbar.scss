@@ -51,7 +51,10 @@
     top: 8vh;
 }
 
-.collapse-style {
+.dropdown-menu {
   border-radius: 20px;
-  background-color: $light-blue;
+  border-color: $red-orange;
+  border-width: 2px;
+  background-color: $pink;
+  color: $red-orange;
 }
