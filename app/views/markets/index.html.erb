@@ -3,8 +3,15 @@
   <h1 class="text-center">Overview</h1>
 
   <div class="d-flex justify-content-center">
-    <%# search form %>
-    <div class="filter">
+        <%= form_tag markets_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "What are you looking for?"%>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+
+    <div class="filter pl-5">
       <h4>Filter by category:</h4>
         <%= form_tag markets_path, method: :get do %>
           <%= select_tag :category, options_for_select(['', 'Animals','Music','Plants', 'Handywork', 'Concerts', 'Transportation', 'Crafts', 'Sports', 'Education', 'Circus', 'Film & Photography', 'Baking & Cooking']) %>
@@ -15,27 +22,36 @@
   </div>
 </div>
 
-<div class="flexbox">
-  <% @markets.each do |market| %>
-  <div class="card-index">
 
-    <%# if market.photo.attached? %>
-      <%#= cl_image_tag(market.photo.key, width: 400, height: 300, crop: :fill) %>
-    <%# elsif market.avatar? %>
-      <%#= image_tag(market.avatar, width: 400, height: 300, crop: :fill)  %>
-    <%# end %>
-    <%# <div class="card-location"> %>
-      <%# <a href="#"><i class="fas FA-map-marker-alt"></i>  0.3 km</a> %>
-    <%# </div> %>
-    <div class="card-index-infos">
-      <h2><%= link_to market.title, market_path(market) %></h2>
-      <br>
-    <p><%= market.description %></p>
-      <%= button_to "See Details", market_path(market), :class => "btn-solid-red", :method => :get %>
+  <div class="index-cards mt-3">
+    <% @markets.each do |market| %>
+    <div class="card-trip">
+
+      <%# if market.photo.attached? %>
+        <%#= cl_image_tag(market.photo.key, width: 400, height: 300, crop: :fill) %>
+      <%# elsif market.avatar? %>
+        <%#= image_tag(market.avatar, width: 400, height: 300, crop: :fill)  %>
+      <%# end %>
+      <%# <div class="card-location"> %>
+        <%# <a href="#"><i class="fas FA-map-marker-alt"></i>  0.3 km</a> %>
+      <%# </div> %>
+
+      <%# placeholder image %>
+      <%= image_tag "image-from-rawpixel-id-2627377-original.jpg" %>
+      <%# placeholder image %>
+      <div class="card-trip-infos">
+        <div class="card-title">
+          <h2><%= link_to market.title, market_path(market) %></h2>
+        </div>
+        <br>
+        <div>
+        <p><%= market.description %></p>
+        </div>
+        <%= button_to "See Details", market_path(market), :class => "btn-line-red card-btn btn-block", :method => :get %>
+      </div>
     </div>
+    <% end  %>
   </div>
-  <% end  %>
-</div>
 
 
 
