@@ -3,8 +3,15 @@
   <h1 class="text-center">Overview</h1>
 
   <div class="d-flex justify-content-center">
-    <%# search form %>
-    <div class="filter">
+        <%= form_tag markets_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "What are you looking for?"%>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+
+    <div class="filter pl-5">
       <h4>Filter by category:</h4>
         <%= form_tag markets_path, method: :get do %>
           <%= select_tag :category, options_for_select(['', 'Animals','Music','Plants', 'Handywork', 'Concerts', 'Transportation', 'Crafts', 'Sports', 'Education', 'Circus', 'Film & Photography', 'Baking & Cooking']) %>

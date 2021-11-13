@@ -7,11 +7,17 @@ class MarketsController < ApplicationController
 
   def index
     @markets = policy_scope(Market).order(created_at: :desc)
-    @markets = Market.all
+    #@markets = Market.all
     if params[:category].present? && params[:category] != ""
 
       sql_query = "category ILIKE :category"
       @markets = Market.where(sql_query, category: "%#{params[:category]}%")
+    elsif
+      params[:query].present?
+      sql_query = "title ILIKE :query OR description ILIKE :query"
+      @markets = Market.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @markets = Market.all
     end
   end
 
