@@ -24,6 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import "animate.css";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -33,17 +34,4 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
 });
 
-// // Get the container element
-// var buttonlinkContainer = document.getElementById("menu");
-
-// // Get all buttons with class="btn" inside the container
-// var buttons = buttonContainer.getElementsByClassName("button");
-
-// // Loop through the buttons and add the active class to the current/clicked button
-// for (var i = 0; i < btns.length; i++) {
-//   buttons[i].addEventListener("click", function() {
-//     var current = document.getElementsByClassName("active");
-//     current[0].className = current[0].className.replace(" active", "");
-//     this.className += " active";
-//   });
-// }
+console.log('Hello');

@@ -1,29 +1,30 @@
-<div class="container mt-5">
+<div class="container">
 
   <h1 class="text-center">Overview</h1>
 
-  <div class="d-flex justify-content-center">
-        <%= form_tag markets_path, method: :get do %>
+  <div class="index-top">
+    <div class="search-form">
+        <div class="search-input"><%= form_tag markets_path, method: :get do %>
           <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "What are you looking for?"%>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
+          placeholder: "What are you looking for?"%></div>
+          <div><%= submit_tag "Search", class: "btn-line-red" %></div>
         <% end %>
-
-    <div class="filter pl-5">
-      <h4>Filter by category:</h4>
-        <%= form_tag markets_path, method: :get do %>
-          <%= select_tag :category, options_for_select(['', 'Animals','Music','Plants', 'Handywork', 'Concerts', 'Transportation', 'Crafts', 'Sports', 'Education', 'Circus', 'Film & Photography', 'Baking & Cooking']) %>
-        <%= submit_tag "Filter", class: "btn-solid-red" %>
+    </div>
+    <div class="filter">
+        <div class="filter-dd"><%= form_tag markets_path, method: :get do %>
+          <%= select_tag :category, options_for_select(['Choose category', 'Animals','Music','Plants', 'Handywork', 'Concerts', 'Transportation', 'Crafts', 'Sports', 'Education', 'Circus', 'Film & Photography', 'Baking & Cooking']) %></div>
+        <div><%= submit_tag "Filter", class: "btn-line-red" %></div>
       <% end %>
     </div>
-
   </div>
-</div>
+  </div>
 
 
-  <div class="index-cards mt-3">
+  <div class="img-left">
+  <div class="container">
+  <div class="index-cards">
     <% @markets.each do |market| %>
     <div class="card-trip">
 
@@ -41,20 +42,22 @@
       <%# placeholder image %>
       <div class="card-trip-infos">
         <div class="card-title">
-          <h2><%= link_to market.title, market_path(market) %></h2>
+          <h3 class="title-link"><%= link_to market.title, market_path(market) %></h3>
+          <h3>Time Here</h3>
+            </div>
+            <div>
+              <i class="fas fa-heart card-trip-user"></i>
+              <p><%= market.description %></p>
+            </div>
+            <%= button_to "See Details", market_path(market), :class => "btn-line-red card-btn", :method => :get %>
+            <br>
+          </div>
         </div>
-        <br>
-        <div>
-        <p><%= market.description %></p>
-        </div>
-        <%= button_to "See Details", market_path(market), :class => "btn-line-red card-btn btn-block", :method => :get %>
-      </div>
-    </div>
     <% end  %>
   </div>
-
-
-
+  </div>
+</div>
+</div>
 <%# For editing offers/requests  %>
     <%# <% @markets.each do |market| %>
       <%# <% if policy(market).edit? %>

@@ -9,13 +9,13 @@ justify-content: center;
   background-position: top;
   background-size: cover;
   height: 120vh;
-  -webkit-animation: slide-fwd-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
-	      animation: slide-fwd-left 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
 }
 
 .banner-text {
 //  width: 80vw;
   padding-left: 12vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .banner-text h1{
