@@ -1,12 +1,12 @@
-<div class="banner banner-content" id="banner-img">
+<div class="banner banner-content animate__animated animate__fadeIn animate__slower" id="banner-img">
   <div class="banner-text">
-      <h1>Some catchy phrase <br>to get the users <br>attention.</h1>
-      <%= link_to "Search", "#", class: "btn-solid-red" %>
+      <div><h1>Some catchy phrase <br>to get the users <br>attention.</h1></div>
+      <div><%= link_to "Search", "#", class: "btn-solid-red" %></div>
   </div>
 
   <div class="container">
-    <div>
-      <h2>Discover our wonderful offers</h2>
+    <div class="headline">
+      <h2 class= "">Discover our wonderful offers</h2>
     </div>
     <div class="filter-container">
       <%= link_to "Remote", "#", class: "filter-links" %>
@@ -15,18 +15,19 @@
       <%= link_to "Staff pick", "#", class: "filter-links" %>
     </div>
 
-    <div class="four-cards mt-3">
+    <div class="four-cards">
+
       <% markets = Market.limit(4).order("RANDOM()") %>
       <% markets.each do |market| %>
         <div class="card-trip">
           <%= image_tag "image-from-rawpixel-id-2627377-original.jpg" %>
           <div class="card-trip-infos">
             <div class= "card-title">
-              <h2><%= link_to market.title, market_path(market) %></h2>
-              <h2>Time Here</h2>
+              <%= link_to market.title, market_path(market) %>
+              <h3>Time Here</h3>
             </div>
             <div>
-              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+              <i class="fas fa-heart card-trip-user"></i>
               <p><%= market.description %></p>
             </div>
             <%= button_to "See Details", market_path(market), :class => "btn-line-red card-btn btn-block", :method => :get %>
@@ -39,7 +40,10 @@
 </div>
 <br><br><br>
 
-<div class="img-left">
+
+
+
+
 <div class="container">
   <div class="headline">
     <h2>How it works</h2>
@@ -54,7 +58,9 @@
         <%= image_tag "master-of-time.png" %>
       </div>
       </div>
-
+    </div>
+    <div class="img-left">
+    <div class="container">
     <div class="description">
       <div class="">
         <%= image_tag "master-of-time.png" %>
