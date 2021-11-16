@@ -14,6 +14,8 @@ justify-content: center;
 .banner-text {
 //  width: 80vw;
   padding-left: 12vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .banner-text h1{
@@ -33,6 +35,7 @@ justify-content: center;
   width: 60vw;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 60px;
 }
 
 .banner-content {
@@ -45,6 +48,12 @@ justify-content: center;
   background-position: left;
   background-size: cover;
   height: 120vh;
+}
+
+.img-left-small {
+  background-image: url(blob-small.svg);
+  background-position: left;
+  background-size: cover;
 }
 
 .img-right {
@@ -70,6 +79,10 @@ justify-content: center;
 }
 
 .headline {
-  padding-top: 25vh;
-  padding-bottom: 5vh;
+  //padding-top: 25vh;
+  //padding-bottom: 5vh;
+}
+
+.headline h2 {
+  font-size: 2rem;
 }
