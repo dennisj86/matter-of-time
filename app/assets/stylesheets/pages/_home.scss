@@ -16,14 +16,13 @@ justify-content: center;
   padding-left: 12vw;
   display: flex;
   flex-direction: column;
+  margin-top: 60vh;
 }
 
 .banner-text h1{
   color: $mid-blue;
   font-size: 3.5rem;
-  padding-top: 70vh;
-  padding-bottom: 10vh;
-
+  padding-top: 440px;
 }
 
 .filter-links {
@@ -66,7 +65,7 @@ justify-content: center;
 .description {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-content: center;
 }
 
 .details {
@@ -74,12 +73,16 @@ justify-content: center;
   padding-bottom: 35vh;
 }
 
-.details h2 {
-  font-display: l;
+.text-left h2 {
+  text-align: left !important;
+}
+
+.text-right h2 {
+  text-align: right !important;
 }
 
 .headline {
-  //padding-top: 25vh;
+  margin-top: 100px;
   //padding-bottom: 5vh;
 }
 
