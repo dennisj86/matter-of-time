@@ -6,4 +6,5 @@ class MessagesController < ApplicationController
     @markets = Market.where(user: @user.id)
     skip_policy_scope
   end
+
 end
