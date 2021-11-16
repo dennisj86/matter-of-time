@@ -15,7 +15,7 @@
       <div class="">
         <p><%= @market.description %></p>
         <div class="">
-          <%= link_to 'Send Message', new_market_booking_path(@market), class: "btn" %>
+          <%= link_to 'Send Message', new_market_booking_message_path(@market, @booking), class: "btn" %>
         </div>
       </div>
     </div>
