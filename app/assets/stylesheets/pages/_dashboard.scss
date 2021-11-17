@@ -23,9 +23,6 @@
   border-bottom-width: .75px;
   border-bottom-color: rgb(105, 105, 105);
   border-bottom-style: solid;
-  // border-right-width: .75px;
-  // border-right-color: rgb(105, 105, 105);
-  // border-right-style: solid;
   padding: 8px;
   margin: 8px;
 }
@@ -50,6 +47,13 @@ padding-bottom: 8px;
 .chat{
   width: 400px;
   height: 500px;
+  border-left-width: .75px;
+  border-left-color: rgb(105, 105, 105);
+  border-left-style: solid;
+}
+
+.messages{
+
 }
 
 .bottom{
