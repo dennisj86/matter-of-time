@@ -8,33 +8,33 @@ class MessagesController < ApplicationController
   end
 
   def new
-    @booking = Booking.new(booking_params)
-    @booking = Booking.find(params[:booking_id])
-    @market = Market.find(params[:market_id])
-    @message = Message.new
-    authorize @message
+    #@booking = Booking.new(booking_params)
+    #@booking = Booking.find(params[:booking_id])
+    #@market = Market.find(params[:market_id])
+    #@message = Message.new
+    #authorize @message
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    @booking = Booking.find(params[:booking_id])
-    @market = Market.find(params[:market_id])
-    @message = Message.new(message_params)
-    @booking.market = @market
-    @booking.message = @message
-    @booking.user = @user
-    @message.user = @user
-    @booking.save
-    @message.save
+    #@booking = Booking.new(booking_params)
+    #@booking = Booking.find(params[:booking_id])
+    #@market = Market.find(params[:market_id])
+    #@message = Message.new(message_params)
+    #@booking.market = @market
+    #@booking.message = @message
+    #@booking.user = @user
+    #@message.user = @user
+    #@booking.save
+    #@message.save
   end
 
-  private
+  #private
 
-  def booking_params
-    params.require(:booking).permit(:date, :status)
-  end
+  #def booking_params
+    #params.require(:booking).permit(:date, :status)
+  #end
 
-  def message_params
-    params.require(:message).permit(:content, :status)
-  end
+  #def message_params
+    #params.require(:message).permit(:content, :status)
+  #end
 end
