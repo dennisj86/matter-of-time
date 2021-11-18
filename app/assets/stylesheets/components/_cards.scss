@@ -38,6 +38,7 @@
 
 .card-trip .card-trip-infos {
   position: relative;
+  background-color: #ffffff40;
 }
 
 .card-trip-infos .card-trip-user {
@@ -60,11 +61,12 @@
 }
 
 .four-cards {
-  height: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20vh;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  height: 400px;
 }
 
 .index-cards {
@@ -75,7 +77,8 @@
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  padding-bottom: 20vh;
+  flex-grow: 2;
+  padding-bottom: 60px;
   padding-top: 50px;
 }
 

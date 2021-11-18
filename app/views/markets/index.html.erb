@@ -44,12 +44,12 @@
         <div class="card-title">
           <h3 class="title-link"><%= link_to market.title, market_path(market) %></h3>
           <h3>Time Here</h3>
-            </div>
+        </div>
             <div>
               <i class="fas fa-heart card-trip-user"></i>
               <p><%= market.description %></p>
             </div>
-            <%= button_to "See Details", market_path(market), :class => "btn-line-red card-btn", :method => :get %>
+            <div class="center-btn"><%= button_to "See Details", market_path(market), :class => "btn-line-red card-btn", :method => :get %></div>
             <br>
           </div>
         </div>
