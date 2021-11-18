@@ -13,6 +13,6 @@ class User < ApplicationRecord
   end
 
   def all_messages
-    Message.joins(booking: :market).where("markets.user_id = #{id} OR bookings.user_id = #{id}.all").all
+    Message.joins(booking: :market).where("markets.user_id = #{id} OR bookings.user_id = #{id}")
   end
 end

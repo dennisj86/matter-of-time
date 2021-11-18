@@ -34,4 +34,4 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
 });
 
-console.log('Hello');
+import "controllers"
