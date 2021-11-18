@@ -17,7 +17,9 @@
   padding: 4px 20px;
   border-radius: 18px;
   //font-weight: bold;
-  //background-color: white;
+  background-color: #fffff80;
+    backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-color: $red-orange;
   border-style: solid;
   border: 1;
@@ -26,4 +28,10 @@
 .btn-line-red:hover {
   text-decoration: none;
   color: $red-orange;
+}
+
+.center-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
