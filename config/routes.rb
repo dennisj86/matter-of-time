@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #get 'bookings/index'
   #get 'markets/index'
   #get 'markets/new'
   #get 'markets/show'
