@@ -1,11 +1,80 @@
 #profile_header {
-  padding-top: 10vh;
+  padding-top: 23vh;
   display: flex;
   justify-content: center;
 }
 
 #profile_menu {
+  padding-top: 23px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: center;
+}
 
+.user-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.message-preview{
+  width: 400px;
+  border-bottom-width: .75px;
+  border-bottom-color: rgb(105, 105, 105);
+  border-bottom-style: solid;
+  padding: 8px;
+  margin: 8px;
+}
+
+.message-title {
+  font-weight: bold;
+}
+
+.message-overview{
+padding-bottom: 8px;
+
+}
+
+.messages-container{
+  border-style: solid;
+  border-color: rgb(105, 105, 105);
+  border-width: .75px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat{
+  width: 600px;
+  height: 500px;
+  border-left-width: .75px;
+  border-left-color: rgb(105, 105, 105);
+  border-left-style: solid;
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.messages{
+margin: 12px;
+}
+
+.bottom{
+  height: 200px;
+}
+
+.handshake {
+ padding: 12px;
+ display: flex;
+ justify-content: space-around;
+}
+
+.message-form {
+  width: 95%;
+  height: 70px;
+  border-width: .75px;
+  border-color: rgb(105, 105, 105);
+  border-style: solid;
+  padding: 12px;
+  margin: 12px;
 }
