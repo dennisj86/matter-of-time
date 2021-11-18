@@ -1,7 +1,7 @@
-class MarketPolicy < ApplicationPolicy
+class MessagePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope.joins(:market).where("markets.user_id = #{@user.id} OR bookings.user_id = #{@user.id}")
       # For a multi-tenant SaaS app, you may want to use:
       # scope.where(user: user)
     end

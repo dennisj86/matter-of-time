@@ -12,36 +12,48 @@ User.destroy_all
 
 admin = User.create(
   email: "admin@admin.com",
+  first_name: "Admin",
+  last_name: "Istrator",
   password: '123456'
 )
 puts "Created #{admin.email}"
 
 john = User.create(
   email: "john@smith.com",
+  first_name: "John",
+  last_name: "Smith",
   password: '123456'
 )
 puts "Created #{john.email}"
 
 james = User.create(
   email: "james@bond.com",
+  first_name: "James",
+  last_name: "Bond",
   password: '123456'
 )
 puts "Created #{james.email}"
 
 steven = User.create(
   email: "steven@seagull.com",
+  first_name: "Steven",
+  last_name: "Seagull",
   password: '123456'
 )
 puts "Created #{steven.email}"
 
 johannes = User.create(
   email: "johannes@berger.com",
+  first_name: "Johannes",
+  last_name: "Berger",
   password: '123456'
 )
 puts "Created #{johannes.email}"
 
 thomas = User.create(
   email: "thomas@mueller.com",
+  first_name: "Thomas",
+  last_name: "Mueller",
   password: '123456'
 )
 puts "Created #{thomas.email}"
@@ -54,7 +66,7 @@ offer_1 = {
   title: "Learn Javascript",
   description: 'I have over 4 years experience as a fullstack developer and have created a compact course to teach Javascript in under 10 hours. Book your first 60 minutes to learn the basics.',
   offer_request: 0,
-  user_id: admin.id
+  user_id: thomas.id
 }
 
 offer_2 = {
@@ -130,23 +142,31 @@ booking_3 = Booking.create!(
 puts "booking #{booking_3.id} created"
 
 message_1 = Message.create!(
-  content: "hi!",
+  content: "hi!, My name is John and I would like to do what the market does",
   user_id: booking_1.user.id,
   booking_id: booking_1.id
 )
-puts "message #{message_1.id} by #{message_1.user.email} created"
+puts "message #{message_1.id} by #{message_1.user.first_name} created"
 
 message_2 = Message.create!(
-  content: "hi!",
+  content: "hi! My name is Thomas and I dont know what I'm doing here. HELP!",
   user_id: booking_2.user.id,
   booking_id: booking_2.id
 )
 
-puts "message #{message_2.id} by #{message_2.user.email} created"
+puts "message #{message_2.id} by #{message_2.user.first_name} created"
 
 message_3 = Message.create!(
-  content: "hi, you!",
+  content: "Howdy. Do you rent horses?",
   user_id: booking_3.user.id,
   booking_id: booking_3.id
 )
-puts "message #{message_3.id} by #{message_3.user.email} created"
+puts "message #{message_3.id} by #{message_3.user.first_name} created"
+
+message_4 = Message.create!(
+  content: "Bojack?",
+  user_id: Market.first.user.id,
+  booking_id: booking_3.id
+)
+
+puts "message #{message_4.id} by #{message_4.user.first_name} created"

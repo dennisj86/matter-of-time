@@ -1,0 +1,14 @@
+<%= render 'shared/header' %>
+<div>
+  <div data-controller="show-selected-booking">
+    <div>
+      <% @booking.each do |booking| %>
+      <div><%= booking.user.email %> <%= booking.created_at %></div>
+      <div> <%= booking.market.title %> </div>
+      <% end %>
+    </div>
+    <div data-show-selected-booking-target="items">
+      hello
+    </div>
+  </div>
+</div>

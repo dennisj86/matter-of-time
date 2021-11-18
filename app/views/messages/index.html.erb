@@ -1,14 +1,13 @@
 <%= render 'shared/header' %>
-<div>
-  <div data-controller="show-selected-message">
-    <div>
-      <% @bookings.each do |market| %>
-      <div><%= market.user.email %> <%= market.created_at %></div>
-      <div> <%= market.market.title %> </div>
-      <% end %>
+
+<div id="messages" data-booking-id="<%= @booking.id %>">
+  <% @booking.messages.each do |message| %>
+    <div class="message-container" id="message-<%= message.id %>">
+      <i class="author">
+        <span><%= message.user.first_name %></span>
+        <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+      </i>
+      <p><%= message.content %></p>
     </div>
-    <div data-show-selected-message-target="items">
-      hello
-    </div>
-  </div>
+  <% end %>
 </div>

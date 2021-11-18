@@ -1,8 +1,9 @@
 .card-trip {
-  overflow: hidden;
-  width: 19vw;
-  padding-top: 32px;
-  height: 450px;
+  width: 220px;
+  padding-top: 4px;
+  padding-left: 20px;
+  height: 100%;
+  display: block;
 }
 
 .card-trip > img {
@@ -11,7 +12,7 @@
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-trip h3 {
   font-size: 0.8rem;
   font-weight: bold;
   margin: 0;
@@ -21,11 +22,17 @@
 }
 
 .card-trip p {
+  overflow: hidden;
   font-size: 0.8rem;
   opacity: .7;
   margin: 0;
   padding-top: 8px;
   padding-bottom: 12px;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;              /* "overflow"-Wert darf nicht "visible" sein */
+
+  text-overflow: ellipsis;
 }
 
 
@@ -37,18 +44,39 @@
   position: absolute;
   right: 8px;
   top: -192px;
-  width: 40px;
+  width: 20px;
+  color: $pink;
+  font-size: 20px;
 }
 
 .card-title{
   display: flex;
   justify-content: space-between;
+  height: 25px;
+}
+
+.title-link {
+  color: $red-orange;
 }
 
 .four-cards {
+  height: 400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 20vh;
+}
+
+.index-cards {
+  // max-width: 700px;
+  // display: flex;
+  // align-content: flex-start;
+  // justify-content: center;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 20vh;
+  padding-top: 50px;
 }
 
 .card-btn{
