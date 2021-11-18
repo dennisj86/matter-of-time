@@ -27,7 +27,6 @@ class MarketsController < ApplicationController
   end
 
   def create
-    authorize @market
     @market = Market.new(market_params)
     @market.user = current_user
     @market.save
@@ -37,6 +36,7 @@ class MarketsController < ApplicationController
     else
       render :new
     end
+    authorize @market
   end
 
   def update
