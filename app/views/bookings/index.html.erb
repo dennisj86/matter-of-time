@@ -1,2 +1,13 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+<%= render 'shared/header' %>
+<div>
+  <div data-controller="show-selected-booking">
+    <div>
+      <% @booking.each do |booking| %>
+      <div><%= booking.user.email %> <%= booking.created_at %></div>
+      <div> <%= booking.market.title %> </div>
+      <% end %>
+    </div>
+    <div data-show-selected-booking-target="items">
+    </div>
+  </div>
+</div>

@@ -1,16 +1,11 @@
-class BookingPolicy < ApplicationPolicy
+class MessagePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      #scope.joins(booking: :market).where("markets.user_id = #{user} OR bookings.user_id = #{user}")
+      scope.joins(:market).where("markets.user_id = #{@user.id} OR bookings.user_id = #{@user.id}")
       # For a multi-tenant SaaS app, you may want to use:
       # scope.where(user: user)
-
-
-      scope.where(user: user)
     end
   end
-
-
 
   def create?
     return true

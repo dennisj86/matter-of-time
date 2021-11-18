@@ -1,32 +1,58 @@
-<div class="container mt-5">
-  <br>
-  <div class="">
-    <h1>
-      <%= @market.title %>.
-    </h1>
-    <div class="">
-      <div>
-        <%# if @market.photo.attached? %>
-          <%#= cl_image_tag(@market.photo.key, width: 400, height: 300, crop: :fill) %>
-        <%# elsif @market.avatar? %>
-          <%#= image_tag(@market.avatar, width: 400, height: 300, crop: :fill)  %>
-        <%# end %>
-      </div>
-      <div class="">
-        <p><%= @market.description %></p>
-        <div class="">
-          <%= link_to 'Send Message', new_market_booking_message_path(@market, @booking), class: "btn" %>
-        </div>
+<div class="container">
+  <div class="show-card">
+
+    <div class="card-images">
+      <div class="large-image">
+        <%= image_tag "image-from-rawpixel-id-2627377-original.jpg" %>
       </div>
     </div>
 
-    <%# horses-map %>
-    <%#div id="map"
-      style="width: 100%; height: 500px; box-shadow: 0 0 4px rgba(0,0,0,0.2); border-radius: 4px;"
-      data-markers="<%= @marker.to_json "
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] "></div>
+    <div class="all-infos">
+      <h2>Title</h2>
+      <i class="fas fa-map-marker-alt short-info"></i>  Friedrichstr. 31, 10732 Berlin <br>
+      <i class="fas fa-clock short-info"></i>  60 Minutes<br>
+      <i class="fas fa-user short-info"> </i>  Max Mustermann
+
+      <p>Hi, my name is Max and I just love dogs. Unfortunately I’m working full time right now and will be joining a coding bootcamp, so I don’t have enough time for my own dog. But a lief without dogs is a sad life.
+          I have a lot of experience with dogs - my family had three dogs when I was growing up.
+
+          Looking forward to your message!</p>
+      <div class="market-buttons">
+        <div><%= link_to "Write a message", "#", class: "btn-solid-red" %></div>
+        <div><%= link_to "#" do %>
+            <i class="fas fa-heart btn-line-red"> Save</i>
+        <% end %></div>
+      </div>
     </div>
-    %>
+
   </div>
-    <br>
+
+
+  <div class="headline">
+    <h2 class= "">Other offers you might like</h2>
+  </div>
+  <div class="four-cards">
+
+      <% markets = Market.limit(4).order("RANDOM()") %>
+      <% markets.each do |market| %>
+        <div class="card-trip">
+          <%= image_tag "image-from-rawpixel-id-2627377-original.jpg" %>
+          <div class="card-trip-infos">
+            <div class= "card-title">
+              <%= link_to market.title, market_path(market) %>
+              <h3>Time Here</h3>
+            </div>
+            <div>
+              <i class="fas fa-heart card-trip-user"></i>
+              <p><%= market.description %></p>
+            </div>
+            <%= button_to "See Details", market_path(market), :class => "btn-line-red", :method => :get %>
+            <br>
+          </div>
+        </div>
+      <% end  %>
+    </div>
+
+
+
 </div>

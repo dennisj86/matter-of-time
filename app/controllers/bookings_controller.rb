@@ -3,8 +3,9 @@ class BookingsController < ApplicationController
   before_action :user, only: %i[index show new create]
 
   def index
-    @bookings = policy_scope(Booking).order(created_at: :desc)
-    @bookings = Booking.where(user: @user.id)
+    @user = current_user
+    @messages = @user.all_messages
+    @booking = policy_scope(Booking)
   end
 
   def new
