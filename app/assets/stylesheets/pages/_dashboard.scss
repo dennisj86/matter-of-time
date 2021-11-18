@@ -45,17 +45,36 @@ padding-bottom: 8px;
 }
 
 .chat{
-  width: 400px;
+  width: 600px;
   height: 500px;
   border-left-width: .75px;
   border-left-color: rgb(105, 105, 105);
   border-left-style: solid;
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
 }
 
 .messages{
-
+margin: 12px;
 }
 
 .bottom{
   height: 200px;
+}
+
+.handshake {
+ padding: 12px;
+ display: flex;
+ justify-content: space-around;
+}
+
+.message-form {
+  width: 95%;
+  height: 70px;
+  border-width: .75px;
+  border-color: rgb(105, 105, 105);
+  border-style: solid;
+  padding: 12px;
+  margin: 12px;
 }
