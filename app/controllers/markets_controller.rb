@@ -23,10 +23,11 @@ class MarketsController < ApplicationController
 
   def new
     @market = Market.new
+    authorize @market
   end
 
   def create
-    #authorize @market
+    authorize @market
     @market = Market.new(market_params)
     @market.user = current_user
     @market.save
