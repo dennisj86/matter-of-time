@@ -2,9 +2,6 @@ class MarketsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
   before_action :user, only: %i[index show new create]
 
-
-
-
   def index
     @markets = policy_scope(Market).order(created_at: :desc)
     #@markets = Market.all

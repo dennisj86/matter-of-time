@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
-  include Pundit
-  skip_after_action :verify_authorized, only: [:home]
+  #include Pundit
+  skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @markets = policy_scope(Market)
+    #@markets = policy_scope(Market)
     @markets = Market.all
   end
 end
