@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="login-signup">
+    <div class="sign-up">
+    <h2>Create your offer</h2>
+
+    <%= simple_form_for(@market) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :title,
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "Offer title" } %>
+        <p><%= f.label :description %></p>
+        <%= f.text_area :description,
+                    required: false,
+                    input_html: { autocomplete: "Describe your offer" } %>
+        <%= f.input :category, collection: %w[Animals Music Plants Handywork Concerts Transportation Crafts Sports Education Circus Film&Photography Baking&Cooking] %>
+        <p><%= f.label :photo %></p>
+        <p><%= f.file_field :photo, multiple: false, direct_upload: true %></p>
+      </div>
+
+      <div class="form-actions btn-solid-red">
+        <%#= link_to 'Create Offer', market_path(@market) %>
+        <%= f.button :submit, "Create Offer" %>
+      </div>
+    <% end %>
+      </div>
+      <div class="">
+        <%= image_tag "master-of-time.png" %>
+      </div>
+   </div>
+</div>
