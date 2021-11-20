@@ -54,9 +54,17 @@ padding-bottom: 8px;
   flex-direction: column;
   margin: 8px;
 }
-
+#chat-right {
+  text-align: right !important;
+}
+#chat-left {
+  text-align: left !important;
+}
 .messages{
 margin: 12px;
+display: grid;
+grid-template-columns: 1fr;
+overflow: auto;
 }
 
 .bottom{
