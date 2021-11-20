@@ -15,13 +15,11 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    @market = Market.find(params[:market_id])
-    @booking.market = @market
-    @booking.user = @user
-    @booking.save
+    @booking = Booking.new(market_id: params[:market_id], user_id: current_user.id, status: "pending")
+    @booking.messages.build(content: params[:message_text], user_id: current_user.id)
+    authorize @booking
     if @booking.save
-      redirect_to messages_path(@dashboard) #to Dashboard Messages
+      redirect_to dashboard_index_path, notice: "Message sent" #to Dashboard Messages
     else
       render :new
     end
