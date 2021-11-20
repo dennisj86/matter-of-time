@@ -25,7 +25,7 @@
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle login-img", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <li class="nav-item dropdown login-dd">
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Create an offer", "#", class: "dropdown-item" %>
+            <%= link_to "Create an offer", new_market_path, class: "dropdown-item" %>
             <%= link_to "My offers", "#", class: "dropdown-item" %>
             <%= link_to "My profile", "/dashboard", class: "dropdown-item" %>
             <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>

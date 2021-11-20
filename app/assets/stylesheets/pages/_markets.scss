@@ -1,0 +1,41 @@
+.show-card{
+  padding-top: 25vh;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+.market-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 250px;
+  padding-top: 24px;
+
+}
+ .large-image > img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+ }
+
+ .short-info {
+  padding-bottom: 24px;
+  padding-top: 16px;
+  color: $red-orange;
+ }
+
+ .all-infos {
+   padding-left: 34px;
+   width: 450px;
+   padding-top: 0px;
+ }
+ .all-infos h2 {
+   padding: 0px !important;
+   text-align: left !important;
+ }
+
+ i {
+   padding: 0px;
+ }
