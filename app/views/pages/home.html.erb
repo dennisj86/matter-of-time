@@ -1,7 +1,7 @@
 <div class="banner banner-content animate__animated animate__fadeIn animate__slower" id="banner-img">
   <div class="banner-text">
-      <div><h1>Some catchy phrase <br>to get the users <br>attention.</h1></div>
-      <div class= "animate__animated animate__shakeX animate__delay-5s"><%= link_to "Search", "/markets", class: "btn-solid-red" %></div>
+    <div><h1>Some catchy phrase <br>to get the users <br>attention.</h1></div>
+    <div class= "animate__animated animate__shakeX animate__delay-5s"><%= link_to "Search", "/markets", class: "btn-solid-red" %></div>
   </div>
 
   <div class="container">
@@ -16,7 +16,6 @@
     </div>
 
     <div class="four-cards">
-
       <% markets = Market.limit(4).order("RANDOM()") %>
       <% markets.each do |market| %>
         <div class="card-trip">
@@ -36,28 +35,34 @@
         </div>
       <% end  %>
     </div>
+
   </div>
+
 </div>
+
+
+
 <br><br><br>
 <div class="img-left-small">
-<div class="container">
-  <div class="headline">
-    <h2>How it works</h2>
-  </div>
+  <div class="container">
+    <div class="headline">
+      <h2>How it works</h2>
+    </div>
     <div class="description">
       <div class="details text-left">
         <h2>Take a look at our offers</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
-       <div class="center-btn"> <%= link_to "Explore", "#", class: "btn-line-red" %></div>
+        <div class="center-btn"> <%= link_to "Explore", "#", class: "btn-line-red" %></div>
       </div>
       <div class="">
         <%= image_tag "master-of-time.png" %>
       </div>
-      </div>
     </div>
-    </div>
-    <div class="img-left">
-    <div class="container">
+  </div>
+</div>
+
+<div class="img-left">
+  <div class="container">
     <div class="description">
       <div class="">
         <%= image_tag "master-of-time.png" %>
@@ -67,12 +72,14 @@
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
         <div class="center-btn"><%= link_to "Explore", "#", class: "btn-line-red" %></div>
       </div>
-      </div>
+    </div>
+  </div>
 </div>
 
 
+
 <div class="img-right">
-<div class="container">
+  <div class="container">
     <div class="description">
       <div class="details text-left">
         <h2>Take a look at our offers</h2>
@@ -82,9 +89,6 @@
       <div class="">
         <%= image_tag "master-of-time.png" %>
       </div>
-      </div>
-
-
-   </div>
-   </div>
-   </div>
+    </div>
+  </div>
+</div>

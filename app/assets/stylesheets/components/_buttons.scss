@@ -17,12 +17,12 @@
   padding: 4px 20px;
   border-radius: 18px;
   //font-weight: bold;
-  background-color: #fffff80;
-    backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  // background-color: #fffff80;
+  //   backdrop-filter: blur(8px);
+  // -webkit-backdrop-filter: blur(8px);
   border-color: $red-orange;
   border-style: solid;
-  border: 1;
+  border-width: 0.65px;
 }
 
 .btn-line-red:hover {
