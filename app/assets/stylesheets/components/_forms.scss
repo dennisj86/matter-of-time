@@ -15,8 +15,11 @@
   padding-bottom: 20px;
 }
 
-.btn-solid-red a {
-  color: white;
-  font-weight: bold;
+.btn-solid-red{
   text-align: center;
+  .btn{
+    color: white;
+    font-weight: bold;
+    padding: 0px;
+  }
 }

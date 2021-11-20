@@ -14,16 +14,17 @@
   <body>
 
   <div class="page-container">
-    <div class="navbar-container"><%= render "shared/navbar" %></div>
+    <%= render "shared/navbar" %>
     <div class="content-container"><%= yield %></div>
+      <footer id="footer">
+        <div>
+          <%= render "shared/footer" %>
+        </div>
+      </footer>
   </div>
 
-<%#
-   <footer id="footer">
-   <div>
-   <h1>test</h1>
-   </div>
-   </footer> %>
+
+
 
   </body>
 </html>
