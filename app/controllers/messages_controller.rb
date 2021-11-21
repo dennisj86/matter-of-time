@@ -3,8 +3,9 @@ class MessagesController < ApplicationController
     # @user = current_user
     #@messages = @user.all_messages
     #@bookings = Booking.joins(:market).where("markets.user_id = #{@user.id} OR bookings.user_id = #{@user.id}").all
-    # @markets = Market.where(user: @user.id)
+    #@markets = Market.where(user: @user.id)
     @bookings = policy_scope(Booking)
+    @booking = Booking.find(params[:booking_id])
   end
 
   def create

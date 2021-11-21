@@ -9,12 +9,28 @@
 puts "Cleaning database..."
 Market.destroy_all
 User.destroy_all
+Faker::UniqueGenerator.clear
+
+16.times do
+  user = User.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.unique.free_email,
+    wallet: Faker::Number.number(digits: 4),
+    description: Faker::Quotes::Shakespeare.unique.hamlet_quote,
+    birth_date: Faker::Date.between(from: '1940-09-23', to: '2014-09-25')
+  )
+  puts "#{user.first_name} #{user.last_name} ;;;; #{user.description} ;;;; #{user.birth_date}"
+end
 
 admin = User.create(
   email: "admin@admin.com",
   first_name: "Admin",
   last_name: "Istrator",
-  password: '123456'
+  password: '123456',
+  wallet: 100,
+  birth_date: Faker::Date.between(from: '1940-09-23', to: '2014-09-25'),
+  description: Faker::Quote.yoda
 )
 puts "Created #{admin.email}"
 
@@ -146,7 +162,29 @@ message_1 = Message.create!(
   user_id: booking_1.user.id,
   booking_id: booking_1.id
 )
+message_1_reply = Message.create!(
+  content: "hi!, nice to here from you!",
+  user_id: booking_1.market.user.id,
+  booking_id: booking_1.id
+)
 puts "message #{message_1.id} by #{message_1.user.first_name} created"
+puts "message #{message_1_reply.id} by #{message_1_reply.user.first_name} created"
+
+5.times do
+  message = Message.create!(
+    content: Faker::Quote.unique.yoda,
+    user_id: booking_1.user.id,
+    booking_id: booking_1.id
+  )
+  message_reply = Message.create!(
+    content: Faker::Quotes::Shakespeare.unique.king_richard_iii_quote,
+    user_id: booking_1.market.user.id,
+    booking_id: booking_1.id
+  )
+  puts "message #{message.id} by #{message.user.first_name} created. content: #{message.content}"
+  puts "message #{message_reply.id} by #{message_reply.user.first_name} created. content: #{message_reply.content}"
+end
+
 
 message_2 = Message.create!(
   content: "hi! My name is Thomas and I dont know what I'm doing here. HELP!",

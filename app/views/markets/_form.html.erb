@@ -8,11 +8,12 @@
         <%= f.input :title,
                     required: false,
                     autofocus: true,
-                    input_html: { autocomplete: "Offer title" } %>
+                    input_html: { placeholder: "Offer title" } %>
         <p><%= f.label :description %></p>
         <%= f.text_area :description,
                     required: false,
-                    input_html: { autocomplete: "Describe your offer" } %>
+                    autofocus: true,
+                    input_html: { placeholder: "Describe your offer" } %>
         <%= f.input :category, collection: %w[Animals Music Plants Handywork Concerts Transportation Crafts Sports Education Circus Film&Photography Baking&Cooking] %>
         <p><%= f.label :photo %></p>
         <p><%= f.file_field :photo, multiple: false, direct_upload: true %></p>
