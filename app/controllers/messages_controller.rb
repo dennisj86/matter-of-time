@@ -28,19 +28,6 @@ class MessagesController < ApplicationController
     #authorize @message
   end
 
-  def create
-    #@booking = Booking.new(booking_params)
-    #@booking = Booking.find(params[:booking_id])
-    #@market = Market.find(params[:market_id])
-    #@message = Message.new(message_params)
-    #@booking.market = @market
-    #@booking.message = @message
-    #@booking.user = @user
-    #@message.user = @user
-    #@booking.save
-    #@message.save
-  end
-
   #private
 
   #def booking_params
