@@ -16,13 +16,16 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(market_id: params[:market_id], user_id: current_user.id, status: "pending")
+    @market = Market.find(params[:market_id])
+    @booking = Booking.new(market_id: @market.id, user_id: current_user.id, status: "pending")
     @booking.messages.build(content: params[:message_text], user_id: current_user.id)
     authorize @booking
     if @booking.save
-      redirect_to dashboard_index_path, notice: "Message sent" #to Dashboard Messages
+      flash[:notice] = "Message sent"
+      redirect_to market_path(@market.id)
     else
-      render :new
+      flash[:alert] = "Something went wrong. Please try again."
+      redirect_to market_path(@market.id)
     end
   end
 
@@ -43,10 +46,6 @@ class BookingsController < ApplicationController
   end
 
   private
-
-  def market
-    @market = Market.find(params[:market_id])
-  end
 
   def user
     @user = current_user
