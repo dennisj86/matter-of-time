@@ -31,6 +31,7 @@ admin = User.create(
   wallet: 100,
   birth_date: Faker::Date.between(from: '1940-09-23', to: '2014-09-25'),
   description: Faker::Quote.yoda
+  avatar: "m_avatar.svg"
 )
 puts "Created #{admin.email}"
 
@@ -39,6 +40,7 @@ john = User.create(
   first_name: "John",
   last_name: "Smith",
   password: '123456'
+  avatar: "man_1.jpg"
 )
 puts "Created #{john.email}"
 
@@ -47,6 +49,7 @@ james = User.create(
   first_name: "James",
   last_name: "Bond",
   password: '123456'
+  avatar: "man_2.jpg"
 )
 puts "Created #{james.email}"
 
@@ -55,6 +58,7 @@ steven = User.create(
   first_name: "Steven",
   last_name: "Seagull",
   password: '123456'
+  avatar: "man_3.jpg"
 )
 puts "Created #{steven.email}"
 
@@ -63,6 +67,7 @@ johannes = User.create(
   first_name: "Johannes",
   last_name: "Berger",
   password: '123456'
+  avatar: "man_4.jpg"
 )
 puts "Created #{johannes.email}"
 
@@ -71,6 +76,7 @@ thomas = User.create(
   first_name: "Thomas",
   last_name: "Mueller",
   password: '123456'
+  avatar: "man_5.jpg"
 )
 puts "Created #{thomas.email}"
 
@@ -79,6 +85,7 @@ andrew = User.create(
   first_name: "Andrew",
   last_name: "Meyer",
   password: '123456'
+  avatar: "man_6.jpg"
 )
 puts "Created #{andrew.email}"
 
@@ -87,6 +94,7 @@ kathrine = User.create(
   first_name: "Kathrine",
   last_name: "Smith",
   password: '123456'
+  avatar: "woman_1.jpg"
 )
 puts "Created #{kathrine.email}"
 
@@ -95,6 +103,7 @@ anne = User.create(
   first_name: "Anne",
   last_name: "Brown",
   password: '123456'
+  avatar: "woman_2.jpg"
 )
 puts "Created #{anne.email}"
 
@@ -103,6 +112,7 @@ mary = User.create(
   first_name: "Mary",
   last_name: "Poppins",
   password: '123456'
+  avatar: "woman_3jpg"
 )
 puts "Created #{mary.email}"
 
@@ -111,6 +121,7 @@ rory = User.create(
   first_name: "Rory",
   last_name: "Campbell",
   password: '123456'
+  avatar: "woman_4.jpg"
 )
 puts "Created #{rory.email}"
 
@@ -119,6 +130,7 @@ mathew = User.create(
   first_name: "Mathew",
   last_name: "Hanna",
   password: '123456'
+  avatar: "m_avatar.svg"
 )
 puts "Created #{mathew.email}"
 
@@ -127,6 +139,7 @@ graham = User.create(
   first_name: "Graham",
   last_name: "Stanton",
   password: '123456'
+  avatar: "m_avatar.svg"
 )
 puts "Created #{graham.email}"
 
@@ -135,6 +148,7 @@ mohamed = User.create(
   first_name: "Mohamed",
   last_name: "Levis",
   password: '123456'
+  avatar: "m_avatar.svg"
 )
 puts "Created #{mohamed.email}"
 
@@ -143,6 +157,7 @@ rashad = User.create(
   first_name: "Rashad",
   last_name: "Crosby",
   password: '123456'
+  avatar: "m_avatar.svg"
 )
 puts "Created #{rashad.email}"
 
@@ -151,6 +166,7 @@ gianni = User.create(
   first_name: "Gianni",
   last_name: "Ford",
   password: '123456'
+  avatar: "m_avatar.svg"
 )
 puts "Created #{gianni.email}"
 
@@ -159,6 +175,7 @@ jessie = User.create(
   first_name: "Jessie",
   last_name: "Bray",
   password: '123456'
+  avatar: "woman_5.jpg"
 )
 puts "Created #{jessie.email}"
 
@@ -167,6 +184,7 @@ jordyn = User.create(
   first_name: "Jordyn",
   last_name: "Freeman",
   password: '123456'
+  avatar: "woman_6.jpg"
 )
 puts "Created #{jordyn.email}"
 
@@ -175,6 +193,7 @@ yareli = User.create(
   first_name: "Yareli",
   last_name: "Whitaker",
   password: '123456'
+  avatar: "m_avatar.svg"
 )
 puts "Created #{yareli.email}"
 
