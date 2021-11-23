@@ -162,21 +162,21 @@ jessie = User.create(
 )
 puts "Created #{jessie.email}"
 
-mohamed = User.create(
-  email: "mohamed@lewis.com",
-  first_name: "Mohamed",
-  last_name: "Levis",
+jordyn = User.create(
+  email: "jordyn@freeman.com",
+  first_name: "Jordyn",
+  last_name: "Freeman",
   password: '123456'
 )
-puts "Created #{mohamed.email}"
+puts "Created #{jordyn.email}"
 
-mohamed = User.create(
-  email: "mohamed@lewis.com",
-  first_name: "Mohamed",
-  last_name: "Levis",
+yareli = User.create(
+  email: "yareli@whitaker.com",
+  first_name: "Yareli",
+  last_name: "Whitaker",
   password: '123456'
 )
-puts "Created #{mohamed.email}"
+puts "Created #{yareli.email}"
 
 
 
