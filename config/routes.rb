@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :bookings, except: %i[create] do
     resources :messages, only: %i[index create]
   end
+
   resources :dashboard, only: %i[index]
 end

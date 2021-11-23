@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
     @user = current_user
     @messages = @user.all_messages
     @booking = policy_scope(Booking)
+
   end
 
   def new
@@ -29,7 +30,10 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @bookings = policy_scope(Booking)
     @booking = Booking.find(params[:id])
+    @message = Message.new
+    authorize @booking
   end
 
   def update
@@ -42,10 +46,6 @@ class BookingsController < ApplicationController
   end
 
   private
-
-  #def market
-    #@market = Market.find(params[:market_id])
-  #end
 
   def user
     @user = current_user
