@@ -28,12 +28,18 @@ justify-content: center;
 .filter-links {
   font-size: 0.8rem;
   font-weight: bold;
+  padding-right: 50px;
+}
+
+.filter-links:hover{
+  color: $red-orange;
+  text-decoration: none;
 }
 
 .filter-container{
-  width: 60vw;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 60px;
 }
 
