@@ -74,6 +74,111 @@ thomas = User.create(
 )
 puts "Created #{thomas.email}"
 
+andrew = User.create(
+  email: "andrew@meyer.com",
+  first_name: "Andrew",
+  last_name: "Meyer",
+  password: '123456'
+)
+puts "Created #{andrew.email}"
+
+kathrine = User.create(
+  email: "kathrine@smith.com",
+  first_name: "Kathrine",
+  last_name: "Smith",
+  password: '123456'
+)
+puts "Created #{kathrine.email}"
+
+anne = User.create(
+  email: "anne@brown.com",
+  first_name: "Anne",
+  last_name: "Brown",
+  password: '123456'
+)
+puts "Created #{anne.email}"
+
+mary = User.create(
+  email: "mary@poppins.com",
+  first_name: "Mary",
+  last_name: "Poppins",
+  password: '123456'
+)
+puts "Created #{mary.email}"
+
+rory = User.create(
+  email: "rory@campbell.com",
+  first_name: "Rory",
+  last_name: "Campbell",
+  password: '123456'
+)
+puts "Created #{rory.email}"
+
+mathew = User.create(
+  email: "mathew@Hanna.com",
+  first_name: "Mathew",
+  last_name: "Hanna",
+  password: '123456'
+)
+puts "Created #{mathew.email}"
+
+graham = User.create(
+  email: "graham@Stanton.com",
+  first_name: "Graham",
+  last_name: "Stanton",
+  password: '123456'
+)
+puts "Created #{graham.email}"
+
+mohamed = User.create(
+  email: "mohamed@lewis.com",
+  first_name: "Mohamed",
+  last_name: "Levis",
+  password: '123456'
+)
+puts "Created #{mohamed.email}"
+
+rashad = User.create(
+  email: "rashad@Crosby.com",
+  first_name: "Rashad",
+  last_name: "Crosby",
+  password: '123456'
+)
+puts "Created #{rashad.email}"
+
+gianni = User.create(
+  email: "gianni@ford.com",
+  first_name: "Gianni",
+  last_name: "Ford",
+  password: '123456'
+)
+puts "Created #{gianni.email}"
+
+jessie = User.create(
+  email: "jessie@bray.com",
+  first_name: "Jessie",
+  last_name: "Bray",
+  password: '123456'
+)
+puts "Created #{jessie.email}"
+
+mohamed = User.create(
+  email: "mohamed@lewis.com",
+  first_name: "Mohamed",
+  last_name: "Levis",
+  password: '123456'
+)
+puts "Created #{mohamed.email}"
+
+mohamed = User.create(
+  email: "mohamed@lewis.com",
+  first_name: "Mohamed",
+  last_name: "Levis",
+  password: '123456'
+)
+puts "Created #{mohamed.email}"
+
+
 
 puts "Creating offers..."
 
