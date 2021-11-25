@@ -204,13 +204,13 @@ puts "Creating offers..."
 offer_1 = {
   category: 'Education',
   title: "Learn Javascript",
-  time: ,
   description: 'I have over 4 years experience as a fullstack developer and have created a compact course to teach Javascript in under 10 hours. Book your first 60 minutes to learn the basics.',
-  location: "",
   offer_request: 0,
-  remote: ,
-  image: ".jpg",
   user_id: thomas.id
+  remote: 0,
+  image: ".jpg",
+  time: 60,
+  location: "Hamburg",
 }
 
 offer_2 = {
@@ -219,6 +219,10 @@ offer_2 = {
   description: 'I am a veterinary student and offer to walk your dog between 1 pm and 6 pm. Just shoot me a text if I can help you out.',
   offer_request: 0,
   user_id: steven.id
+  remote: 1,
+  image: "image-from-rawpixel-id-3339428-original.jpg",
+  time: 45,
+  location: "",
 }
 
 offer_3 = {
@@ -227,8 +231,97 @@ offer_3 = {
   description: 'I am a fitness freak looking for people that want to get fit after christmas season.',
   offer_request: 0,
   user_id: james.id
+  remote: 1,
+  image: ".jpg",
+  time: 90,
+  location: "Munich",
 }
 
+offer_4 = {
+  category: 'Plants',
+  title: "Garden tips and tricks",
+  description: 'Are you a beginner gardener and wonder how and where to start? I got your back! With 10 years of expericence with my own garden I have pretty much made all the mistakes you can make and figured out how to avoid them. Wether you want to start your own veggie garden or want to have the most beautiful roses I will answer your questions!',
+  offer_request: 0,
+  user_id: andrew.id
+  remote: 1,
+  image: "gardening.jpg",
+  time: 45,
+  location: "Hamburg",
+}
+
+offer_5 = {
+  category: 'Crafts',
+  title: "How to make the ceramics",
+  description: 'Ask me anything about ceramics. I have over 20 years of experience with makes my own ceramics. I can help you with your struggles that need to be mastered in the beginning.
+                If you haven’t started yet I can help you find the right tools and help you avoid unnecessary purchases. ',
+  offer_request: 0,
+  user_id: kathrine.id
+  remote: 1,
+  image: "close-up-hand-holding-brush.jpg",
+  time: 30,
+  location: "Hamburg",
+}
+
+offer_6 = {
+  category: 'Education',
+  title: "Want to change your life?",
+  description: 'Then start to code. I have been through that journey. Was sick of my old career and was in need for a change. With basically no coding experience I started my journey to become a great programmer with a perspective and flexibility to work and enjoy my life.',
+  offer_request: 0,
+  user_id: anne.id
+  remote: 1,
+  image: "close-up-image-of-programer-working-at-his-desk-in-office.jpg",
+  time: 60,
+  location: "Duisburg",
+}
+
+offer_7 = {
+  category: 'Education',
+  title: "Math problems? No worries! ",
+  description: 'Especially during the pandemic it was hard for kids to keep up with the school work and working parents just don’t have the time to study with their kid.
+I am a retired school teacher that wants to help families that don’t have the money to pay for tutoring. ',
+  offer_request: 0,
+  user_id: mary.id
+  remote: 1,
+  image: "old-lady-teching.jpg",
+  time: 30,
+  location: "Hamburg",
+}
+
+offer_8 = {
+  category: 'Plants',
+  title: "All your plants are dying?",
+  description: 'Not anymore! I will help you stop killing all your plants and it’s not that hard. ',
+  offer_request: 0,
+  user_id: mathew.id
+  remote: 1,
+  image: "gardening.jpg",
+  time: 30,
+  location: "Stade",
+}
+
+offer_9 = {
+  category: 'Education',
+  title: "Everything you need to know about crypto",
+  description: 'Do you find the crypto market confusing or hard to understand how it works? Bit coin what? I will give you a short introduction and explain the important parts you need to know und understand. You can ask questions. ',
+  offer_request: 0,
+  user_id: rory.id
+  remote: 1,
+  image: "bitcion.jpg",
+  time: 60,
+  location: "Bremen",
+}
+
+offer_10 = {
+  category: 'Crafts',
+  title: "Want to start sewing?",
+  description: 'But not sure if you like it or got no sewing machine? You can come over to my place and start your own little project. Your can choose between several different projects. Your pay for the materials. ',
+  offer_request: 0,
+  user_id: graham.id
+  remote: 1,
+  image: "sewing.jpg",
+  time: 90,
+  location: "Mainz",
+}
 
 
 [offer_1, offer_2, offer_3].each { |offer|
@@ -244,6 +337,10 @@ request_1 = {
   description: 'I have a 5 year old daughter that wants to learn the piano.',
   offer_request: 1,
   user_id: john.id
+  remote: 1,
+  image: ".jpg",
+  time: 60,
+  location: "Berlin",
 }
 
 request_2 = {
@@ -252,6 +349,10 @@ request_2 = {
   description: 'We are 4 mamaboi-students sharing a flat and need help keeping our cave tidy.',
   offer_request: 1,
   user_id: johannes.id
+  remote: 1,
+  image: ".jpg",
+  time: 60,
+  location: "Berlin",
 }
 
 request_3 = {
@@ -260,6 +361,10 @@ request_3 = {
   description: 'My 14 year-old son needs help with homeschooling in math and physics during lockdown',
   offer_request: 1,
   user_id: steven.id
+  remote: 1,
+  image: ".jpg",
+  time: 60,
+  location: "Kiel",
 }
 
 [request_1, request_2, request_3].each { |request|
