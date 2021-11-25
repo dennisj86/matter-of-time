@@ -30,7 +30,8 @@ admin = User.create(
   password: '123456',
   wallet: 100,
   birth_date: Faker::Date.between(from: '1940-09-23', to: '2014-09-25'),
-  description: Faker::Quote.yoda
+  description: Faker::Quote.yoda,
+  avatar: "m_avatar.svg"
 )
 puts "Created #{admin.email}"
 
@@ -38,7 +39,8 @@ john = User.create(
   email: "john@smith.com",
   first_name: "John",
   last_name: "Smith",
-  password: '123456'
+  password: '123456',
+  avatar: "man_1.jpg"
 )
 puts "Created #{john.email}"
 
@@ -46,7 +48,8 @@ james = User.create(
   email: "james@bond.com",
   first_name: "James",
   last_name: "Bond",
-  password: '123456'
+  password: '123456',
+  avatar: "man_2.jpg"
 )
 puts "Created #{james.email}"
 
@@ -54,7 +57,8 @@ steven = User.create(
   email: "steven@seagull.com",
   first_name: "Steven",
   last_name: "Seagull",
-  password: '123456'
+  password: '123456',
+  avatar: "man_3.jpg"
 )
 puts "Created #{steven.email}"
 
@@ -62,7 +66,8 @@ johannes = User.create(
   email: "johannes@berger.com",
   first_name: "Johannes",
   last_name: "Berger",
-  password: '123456'
+  password: '123456',
+  avatar: "man_4.jpg"
 )
 puts "Created #{johannes.email}"
 
@@ -70,9 +75,128 @@ thomas = User.create(
   email: "thomas@mueller.com",
   first_name: "Thomas",
   last_name: "Mueller",
-  password: '123456'
+  password: '123456',
+  avatar: "man_5.jpg"
 )
 puts "Created #{thomas.email}"
+
+andrew = User.create(
+  email: "andrew@meyer.com",
+  first_name: "Andrew",
+  last_name: "Meyer",
+  password: '123456',
+  avatar: "man_6.jpg"
+)
+puts "Created #{andrew.email}"
+
+kathrine = User.create(
+  email: "kathrine@smith.com",
+  first_name: "Kathrine",
+  last_name: "Smith",
+  password: '123456',
+  avatar: "woman_1.jpg"
+)
+puts "Created #{kathrine.email}"
+
+anne = User.create(
+  email: "anne@brown.com",
+  first_name: "Anne",
+  last_name: "Brown",
+  password: '123456',
+  avatar: "woman_2.jpg"
+)
+puts "Created #{anne.email}"
+
+mary = User.create(
+  email: "mary@poppins.com",
+  first_name: "Mary",
+  last_name: "Poppins",
+  password: '123456',
+  avatar: "woman_3.jpg"
+)
+puts "Created #{mary.email}"
+
+rory = User.create(
+  email: "rory@campbell.com",
+  first_name: "Rory",
+  last_name: "Campbell",
+  password: '123456',
+  avatar: "woman_4.jpg"
+)
+puts "Created #{rory.email}"
+
+mathew = User.create(
+  email: "mathew@Hanna.com",
+  first_name: "Mathew",
+  last_name: "Hanna",
+  password: '123456',
+  avatar: "m_avatar.svg"
+)
+puts "Created #{mathew.email}"
+
+graham = User.create(
+  email: "graham@Stanton.com",
+  first_name: "Graham",
+  last_name: "Stanton",
+  password: '123456',
+  avatar: "m_avatar.svg"
+)
+puts "Created #{graham.email}"
+
+mohamed = User.create(
+  email: "mohamed@lewis.com",
+  first_name: "Mohamed",
+  last_name: "Levis",
+  password: '123456',
+  avatar: "m_avatar.svg"
+)
+puts "Created #{mohamed.email}"
+
+rashad = User.create(
+  email: "rashad@Crosby.com",
+  first_name: "Rashad",
+  last_name: "Crosby",
+  password: '123456',
+  avatar: "m_avatar.svg"
+)
+puts "Created #{rashad.email}"
+
+gianni = User.create(
+  email: "gianni@ford.com",
+  first_name: "Gianni",
+  last_name: "Ford",
+  password: '123456',
+  avatar: "m_avatar.svg"
+)
+puts "Created #{gianni.email}"
+
+jessie = User.create(
+  email: "jessie@bray.com",
+  first_name: "Jessie",
+  last_name: "Bray",
+  password: '123456',
+  avatar: "woman_5.jpg"
+)
+puts "Created #{jessie.email}"
+
+jordyn = User.create(
+  email: "jordyn@freeman.com",
+  first_name: "Jordyn",
+  last_name: "Freeman",
+  password: '123456',
+  avatar: "woman_6.jpg"
+)
+puts "Created #{jordyn.email}"
+
+yareli = User.create(
+  email: "yareli@whitaker.com",
+  first_name: "Yareli",
+  last_name: "Whitaker",
+  password: '123456',
+  avatar: "m_avatar.svg"
+)
+puts "Created #{yareli.email}"
+
 
 
 puts "Creating offers..."
@@ -80,8 +204,12 @@ puts "Creating offers..."
 offer_1 = {
   category: 'Education',
   title: "Learn Javascript",
+  time: ,
   description: 'I have over 4 years experience as a fullstack developer and have created a compact course to teach Javascript in under 10 hours. Book your first 60 minutes to learn the basics.',
+  location: "",
   offer_request: 0,
+  remote: ,
+  image: ".jpg",
   user_id: thomas.id
 }
 

@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :market_bookings, through: :markets, source: :bookings
   has_many :bookings
   has_many :messages
+  has_one_attached :photo
 
   def unread_messages
     Message.joins(booking: :market).where("(markets.user_id = #{id} OR bookings.user_id = #{id}) AND messages.status = false").all
