@@ -6,7 +6,6 @@ class BookingsController < ApplicationController
     @user = current_user
     @messages = @user.all_messages
     @booking = policy_scope(Booking)
-
   end
 
   def new

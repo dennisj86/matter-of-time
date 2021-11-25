@@ -5,8 +5,7 @@ class BookingPolicy < ApplicationPolicy
 
       # For a multi-tenant SaaS app, you may want to use:
       # scope.where(user: user)
-      scope.joins(:market, :messages).where(user: user).or(scope.joins(:market, :messages).where("markets.user_id = #{user.id}"))
-      Booking.joins(:market).where(user: 40).or(Booking.joins(:market).where("markets.user_id = 40"))
+      scope.joins(:market).where(user: user).or(scope.joins(:market).where("markets.user_id = #{user.id}"))
     end
   end
 
