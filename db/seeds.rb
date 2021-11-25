@@ -204,7 +204,7 @@ puts "Creating offers..."
 offer_1 = {
   category: 'Education',
   title: "Learn Javascript",
-  description: 'I have over 4 years experience as a fullstack developer and have created a compact course to teach Javascript in under 10 hours. Book your first 60 minutes to learn the basics.'
+  description: 'I have over 4 years experience as a fullstack developer and have created a compact course to teach Javascript in under 10 hours. Book your first 60 minutes to learn the basics.',
   offer_request: 0,
   user_id: thomas.id,
   remote: 0,
