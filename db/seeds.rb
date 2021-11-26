@@ -278,7 +278,7 @@ offer_7 = {
   category: 'Education',
   title: "Math problems? No worries! ",
   description: 'Especially during the pandemic it was hard for kids to keep up with the school work and working parents just don’t have the time to study with their kid.
-I am a retired school teacher that wants to help families that don’t have the money to pay for tutoring. ',
+  I am a retired school teacher that wants to help families that don’t have the money to pay for tutoring.',
   offer_request: 0,
   user_id: mary.id,
   remote: 1,
@@ -290,7 +290,7 @@ I am a retired school teacher that wants to help families that don’t have the 
 offer_8 = {
   category: 'Plants',
   title: "All your plants are dying?",
-  description: 'Not anymore! I will help you stop killing all your plants and it’s not that hard. ',
+  description: 'Not anymore! I will help you stop killing all your plants and it’s not that hard.',
   offer_request: 0,
   user_id: mathew.id,
   remote: 1,
@@ -322,7 +322,6 @@ offer_10 = {
   time: 90,
   location: "Mainz",
 }
-
 
 [offer_1, offer_2, offer_3].each { |offer|
   market = Market.create!(offer)
@@ -417,7 +416,6 @@ puts "message #{message_1_reply.id} by #{message_1_reply.user.first_name} create
   puts "message #{message.id} by #{message.user.first_name} created. content: #{message.content}"
   puts "message #{message_reply.id} by #{message_reply.user.first_name} created. content: #{message_reply.content}"
 end
-
 
 message_2 = Message.create!(
   content: "hi! My name is Thomas and I dont know what I'm doing here. HELP!",
