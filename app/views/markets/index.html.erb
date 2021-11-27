@@ -26,8 +26,11 @@
   <div class="container">
   <div class="index-cards">
     <% @markets.each do |market| %>
+
     <div class="card-trip">
+    <%= link_to market_path(market) do %>
       <%= image_tag "#{market.image}" %>
+    <% end  %>
       <div class="card-trip-infos">
         <div class="card-title">
           <div class="title-link"><%= link_to market.title, market_path(market) %></div>
@@ -40,6 +43,8 @@
             <div class="center-btn"><%= button_to "See Details", market_path(market), :class => "btn-line-red card-btn", :method => :get %></div>
             <br>
           </div>
+
+
         </div>
     <% end  %>
   </div>
