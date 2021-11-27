@@ -29,7 +29,11 @@
 
     <div class="card-trip">
     <%= link_to market_path(market) do %>
-      <%= image_tag "#{market.image}" %>
+      <% if market.photo.attached? %>
+        <%= cl_image_tag "#{market.photo.key}" %>
+        <% else %>
+        <%= image_tag "#{market.image}" %>
+      <% end %>
     <% end  %>
       <div class="card-trip-infos">
         <div class="card-title">

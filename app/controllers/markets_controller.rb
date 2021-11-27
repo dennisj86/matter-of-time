@@ -28,7 +28,7 @@ class MarketsController < ApplicationController
     authorize @market
     @market.user_id = current_user.id
     @market.offer_request = 0
-    @market.save
+    @market.save!
     if @market.save
       redirect_to market_path(@market)
     else
@@ -57,6 +57,6 @@ class MarketsController < ApplicationController
   end
 
   def market_params
-    params.require(:market).permit(:title, :category, :description, :image)
+    params.require(:market).permit(:title, :category, :description, :photo)
   end
 end
