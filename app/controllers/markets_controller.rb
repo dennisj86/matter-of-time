@@ -42,6 +42,7 @@ class MarketsController < ApplicationController
   def show
     @market = Market.find(params[:id])
     authorize @market
+    @booking = Booking.find_by(market: @market, user: current_user)
     respond_to do |format|
       format.html
       format.js

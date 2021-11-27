@@ -16,13 +16,19 @@
       <p><%= @market.description %></p>
       <div class="market-buttons">
         <!-- Button trigger modal -->
-        <button type="button" class="btn-solid-red" data-toggle="modal" data-target="#exampleModal">
-          Write a message
-        </button>
+        <% if @booking.present? %>
+          <div>
+            <h5>You have already requested a booking.</h5>
+            <p>Please move to <%= link_to "dashboard", dashboard_index_path %> to view your messages.</p>
+          </div>
+        <% else %>
+          <button type="button" class="btn-solid-red" data-toggle="modal" data-target="#exampleModal">
+            Write a message
+          </button>
 
 
-        <%= render "markets/modal", market: @market %>
-
+        <%= render "markets/modal", market: @market, booking: @booking %>
+        <% end %>
 
         <div><%= link_to "#" do %>
             <i class="fas fa-heart btn-line-red"> Save</i>
