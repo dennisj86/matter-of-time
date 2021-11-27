@@ -3,11 +3,7 @@
 
     <div class="card-images">
       <div class="large-image">
-<<<<<<< HEAD
-        <%= @market.image %>
-=======
         <%= image_tag "#{@market.image}" %>
->>>>>>> master
       </div>
     </div>
 
@@ -23,7 +19,7 @@
         <% if @booking.present? %>
           <div>
             <h5>You have already requested a booking.</h5>
-            <p>Please move to <%= link_to "dashboard", dashboard_index_path %> to view your messages.</p>
+            <p>Please move to <%= link_to "dashboard", booking_messages_path %> to view your messages.</p>
           </div>
         <% else %>
           <button type="button" class="btn-solid-red" data-toggle="modal" data-target="#exampleModal">

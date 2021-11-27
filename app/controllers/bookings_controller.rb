@@ -36,6 +36,16 @@ class BookingsController < ApplicationController
   end
 
   def update
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.status = "confirmed"
+    @booking.save
+    redirect_to booking_messages_path(@booking), notice: "Booking confirmed"
+
+    #respond_to do |format|
+    # format.html
+    # format.js
+    #end
   end
 
   def destroy
