@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
   def index
     @user = current_user
     @messages = @user.all_messages
-    @booking = policy_scope(Booking)
+    @bookings = policy_scope(Booking).order(updated_at: :desc)
   end
 
   def new
