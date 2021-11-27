@@ -294,7 +294,7 @@ offer_8 = {
   offer_request: 0,
   user_id: mathew.id,
   remote: 1,
-  image: "plants.svg",
+  image: "gardening.jpg",
   time: 30,
   location: "Stade",
 }
