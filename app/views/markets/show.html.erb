@@ -3,7 +3,11 @@
 
     <div class="card-images">
       <div class="large-image">
+<<<<<<< HEAD
         <%= @market.image %>
+=======
+        <%= image_tag "#{@market.image}" %>
+>>>>>>> master
       </div>
     </div>
 
@@ -46,7 +50,7 @@
       <% markets = Market.limit(4).order("RANDOM()") %>
       <% markets.each do |market| %>
         <div class="card-trip">
-          <%= market.image %>
+          <%= image_tag "#{market.image}" %>
           <div class="card-trip-infos">
             <div class= "card-title">
               <%= link_to market.title, market_path(market) %>

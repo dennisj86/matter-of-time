@@ -37,9 +37,9 @@
         <%# <a href="#"><i class="fas FA-map-marker-alt"></i>  0.3 km</a> %>
       <%# </div> %>
 
-
-      <%= market.image %>
-
+      <%# placeholder image %>
+      <%= image_tag "#{market.image}" %>
+      <%# placeholder image %>
       <div class="card-trip-infos">
         <div class="card-title">
           <h3 class="title-link"><%= link_to market.title, market_path(market) %></h3>
