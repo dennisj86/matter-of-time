@@ -5,5 +5,6 @@ class PagesController < ApplicationController
   def home
     #@markets = policy_scope(Market)
     @markets = Market.all
+    @user = current_user
   end
 end

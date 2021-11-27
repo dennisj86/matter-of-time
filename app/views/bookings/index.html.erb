@@ -5,7 +5,7 @@
       <% @booking.each do |booking| %>
       <div class="message-preview">
         <div class="user-info">
-          <div class="user"><%= link_to booking.user.first_name, booking_path(booking.id) %></div>
+          <div class="user"><%= link_to booking.user.first_name, booking_messages_path(booking.id) %></div>
           <div class="date"><%= booking.created_at %></div>
         </div>
         <div class="message-title"> <%= booking.market.title %> </div>
