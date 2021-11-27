@@ -1,8 +1,9 @@
 class MessagesController < ApplicationController
   def index
+    @user = current_user
     @bookings = policy_scope(Booking)
     @booking = Booking.find(params[:booking_id])
-    @message_read = Message.where("booking_id = #{@booking.id} AND user_id != #{current_user.id}")
+    @message_read = Message.where("booking_id = #{@booking.id} AND user_id != #{@user.id}")
     @message_read.each do |message|
       message.status = true
       message.save
