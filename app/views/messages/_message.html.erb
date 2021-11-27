@@ -1,0 +1,17 @@
+<% if message.user == current_user %>
+          <div id="chat-right">
+            <div><%= message.user.first_name %></div><div><%= message.created_at %></div>
+            <br>
+            <div><%= message.content %></div>
+          </div>
+        <% else %>
+
+          <div id="chat-left">
+            <div><%= message.user.first_name %></div><div><%= message.created_at %></div>
+            <br>
+            <div><%= message.content %></div>
+            <br>
+          </div>
+
+
+        <% end %>
