@@ -56,12 +56,29 @@ padding-bottom: 8px;
 }
 #chat-right {
   text-align: right !important;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: $light-blue;
+  margin: 8px;
+  padding: 12px;
+  //width: 60%;
 }
+
 #chat-left {
   text-align: left !important;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: $pink;
+  margin: 8px;
+  padding: 12px;
+  //width: 60%;
 }
+
 .messages{
 margin: 12px;
+// display: flex;
 display: grid;
 grid-template-columns: 1fr;
 overflow: auto;
@@ -85,4 +102,9 @@ overflow: auto;
   border-style: solid;
   padding: 12px;
   margin: 12px;
+}
+
+.message-input {
+  padding: 20px;
+  border: 3px !important;
 }
