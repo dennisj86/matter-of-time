@@ -208,7 +208,7 @@ offer_1 = {
   offer_request: 0,
   user_id: thomas.id,
   remote: 0,
-  image: ".jpg",
+  image: "computer.svg",
   time: 60,
   location: "Hamburg",
 }
@@ -220,7 +220,7 @@ offer_2 = {
   offer_request: 0,
   user_id: steven.id,
   remote: 1,
-  image: "image-from-rawpixel-id-3339428-original.jpg",
+  image: "dog-sitting.svg",
   time: 45,
   location: "",
 }
@@ -232,7 +232,7 @@ offer_3 = {
   offer_request: 0,
   user_id: james.id,
   remote: 1,
-  image: ".jpg",
+  image: "badminton.svg",
   time: 90,
   location: "Munich",
 }
@@ -244,7 +244,7 @@ offer_4 = {
   offer_request: 0,
   user_id: andrew.id,
   remote: 1,
-  image: "woman-hold-fresh-picked-wild-mushrooms.jpg",
+  image: "plants.svg",
   time: 45,
   location: "Hamburg",
 }
@@ -294,7 +294,7 @@ offer_8 = {
   offer_request: 0,
   user_id: mathew.id,
   remote: 1,
-  image: "gardening.jpg",
+  image: "plants.svg",
   time: 30,
   location: "Stade",
 }
@@ -318,12 +318,12 @@ offer_10 = {
   offer_request: 0,
   user_id: graham.id,
   remote: 1,
-  image: "sewing.jpg",
+  image: "sewing.svg",
   time: 90,
   location: "Mainz",
 }
 
-[offer_1, offer_2, offer_3].each { |offer|
+[offer_1, offer_2, offer_3, offer_4, offer_5, offer_6, offer_7, offer_8, offer_9, offer_10].each { |offer|
   market = Market.create!(offer)
   puts "Created #{market.title}"
 }
@@ -337,7 +337,7 @@ request_1 = {
   offer_request: 1,
   user_id: john.id,
   remote: 1,
-  image: ".jpg",
+  image: "music.svg",
   time: 60,
   location: "Berlin",
 }
@@ -349,7 +349,7 @@ request_2 = {
   offer_request: 1,
   user_id: johannes.id,
   remote: 1,
-  image: ".jpg",
+  image: "handywork.svg",
   time: 60,
   location: "Berlin",
 }
@@ -361,7 +361,7 @@ request_3 = {
   offer_request: 1,
   user_id: steven.id,
   remote: 1,
-  image: ".jpg",
+  image: "two-kids-using-laptop-during-lesson.jpg",
   time: 60,
   location: "Kiel",
 }
