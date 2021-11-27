@@ -13,15 +13,26 @@
       </div>
 
       <%= simple_form_for [ @booking, @message ], remote: true do |f| %>
+
+        <%#= f.input :content, label: false, placeholder: "Start to chat!" %>
+        <%#div class="handshake">
+          <%= link_to booking_path(@booking), method: :patch do %>
+            <%#i class="fas fa-hands-helping btn-solid-red"> Handshake</i>
+          <% end %>
+          <%#%= f.button :submit, class: 'btn-line-red'  %>
+        <%#/div> %>
+
+
         <div class="messages">
           <%= f.input :content, label: false, class:"message-input", placeholder: "Start to chat!" %>
         </div>
-      <div class="handshake">
-        <%= link_to "Handshake", "#", class: "btn-solid-red" %>
-        <%= f.button :submit, class: 'btn-line-red'  %>
-      </div>
+        <div class="handshake">
+          <%= link_to booking_path(@booking), class: "btn-solid-red", method: :patch do %>
+            <i class="fas fa-hands-helping btn-solid-red"> Handshake</i>
+          <% end %>
+          <%= f.button :submit, class: 'btn-line-red'  %>
+        </div>
       <% end %>
-    </div>
     </div>
   </div>
 </div>

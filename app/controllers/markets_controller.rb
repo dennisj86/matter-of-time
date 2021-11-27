@@ -25,15 +25,15 @@ class MarketsController < ApplicationController
 
   def create
     @market = Market.new(market_params)
-    @market.user = current_user
-    @market.save
-
+    authorize @market
+    @market.user_id = current_user.id
+    @market.offer_request = 0
+    @market.save!
     if @market.save
-      redirect_to market_path(@market.id)
+      redirect_to market_path(@market)
     else
       render :new
     end
-    authorize @market
   end
 
   def update
@@ -57,6 +57,6 @@ class MarketsController < ApplicationController
   end
 
   def market_params
-    params.require(:market).permit(:title, :category, :description, :offer_request)
+    params.require(:market).permit(:title, :category, :description, :photo)
   end
 end
