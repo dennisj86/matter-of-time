@@ -1,4 +1,4 @@
-<div class="container index">
+<div class="container">
 
   <h1 class="text-center">Overview</h1>
 
@@ -22,7 +22,7 @@
   </div>
 
 
-  <div class="img-left">
+  <div class="img-right">
   <div class="container">
   <div class="index-cards">
     <% @markets.each do |market| %>
@@ -30,8 +30,8 @@
       <%= image_tag "#{market.image}" %>
       <div class="card-trip-infos">
         <div class="card-title">
-          <h3 class="title-link"><%= link_to market.title, market_path(market) %></h3>
-          <h3>Time Here</h3>
+          <div class="title-link"><%= link_to market.title, market_path(market) %></div>
+          <%# <h3>60</h3> %>
         </div>
             <div>
               <i class="fas fa-heart card-trip-user"></i>

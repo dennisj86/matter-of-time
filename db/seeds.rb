@@ -232,7 +232,7 @@ offer_3 = {
   offer_request: 0,
   user_id: james.id,
   remote: 1,
-  image: "badminton.svg",
+  image: "fitness.jpg",
   time: 90,
   location: "Munich",
 }

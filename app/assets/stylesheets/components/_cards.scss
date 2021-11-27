@@ -1,9 +1,11 @@
 .card-trip {
   width: 220px;
-  padding-top: 4px;
-  padding-left: 20px;
+  padding: 8px;
   height: 100%;
   display: block;
+  background-color: $pink;
+  margin: 6px;
+  margin-bottom: 35px;
 }
 
 .card-trip > img {
@@ -16,8 +18,7 @@
   font-size: 0.8rem;
   font-weight: bold;
   margin: 0;
-  padding-top: 8px;
-  padding-bottom: 0px;
+  padding: 0px;
   color: $red-orange;
 }
 
@@ -26,19 +27,22 @@
   font-size: 0.8rem;
   opacity: .7;
   margin: 0;
-  padding-top: 8px;
-  padding-bottom: 12px;
+  padding-top: 5px;
+  padding-bottom: 16px;
   white-space: nowrap;
   width: 100%;
   overflow: hidden;              /* "overflow"-Wert darf nicht "visible" sein */
-
   text-overflow: ellipsis;
 }
 
+.card-trip-infos {
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
 
 .card-trip .card-trip-infos {
   position: relative;
-  background-color: #ffffff40;
 }
 
 .card-trip-infos .card-trip-user {
@@ -53,11 +57,20 @@
 .card-title{
   display: flex;
   justify-content: space-between;
-  height: 25px;
+  align-content: center;
+  height: 40px;
+  padding-top: 12px;
 }
 
 .title-link {
+  a{
   color: $red-orange;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0px;
+  }
 }
 
 .four-cards {
@@ -76,13 +89,17 @@
   // justify-content: center;
   display: flex;
   align-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   flex-grow: 2;
-  padding-bottom: 60px;
+  //padding-bottom: 60px;
   padding-top: 50px;
+  //margin-bottom: 32px;
 }
 
 .card-btn{
   display: flex;
   justify-content: center;
+  width: 100%;
+  background-color: #ffffff00;
 }
