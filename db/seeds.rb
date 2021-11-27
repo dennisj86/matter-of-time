@@ -208,7 +208,7 @@ offer_1 = {
   offer_request: 0,
   user_id: thomas.id,
   remote: 0,
-  image: "computer.svg",
+  image: "close-up-image-of-programer-working-at-his-desk-in-office",
   time: 60,
   location: "Hamburg",
 }
@@ -220,7 +220,7 @@ offer_2 = {
   offer_request: 0,
   user_id: steven.id,
   remote: 1,
-  image: "dog-sitting.svg",
+  image: "dog1.jpg",
   time: 45,
   location: "",
 }
@@ -244,7 +244,7 @@ offer_4 = {
   offer_request: 0,
   user_id: andrew.id,
   remote: 1,
-  image: "plants.svg",
+  image: "gardening.jpg",
   time: 45,
   location: "Hamburg",
 }
@@ -318,7 +318,7 @@ offer_10 = {
   offer_request: 0,
   user_id: graham.id,
   remote: 1,
-  image: "sewing.svg",
+  image: "sewing.jpg",
   time: 90,
   location: "Mainz",
 }
@@ -337,7 +337,7 @@ request_1 = {
   offer_request: 1,
   user_id: john.id,
   remote: 1,
-  image: "music.svg",
+  image: "headphones.jpg",
   time: 60,
   location: "Berlin",
 }
@@ -349,7 +349,7 @@ request_2 = {
   offer_request: 1,
   user_id: johannes.id,
   remote: 1,
-  image: "handywork.svg",
+  image: "the-carpenter-works-with-a-tree",
   time: 60,
   location: "Berlin",
 }

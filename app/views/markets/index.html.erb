@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container index">
 
   <h1 class="text-center">Overview</h1>
 
@@ -27,19 +27,7 @@
   <div class="index-cards">
     <% @markets.each do |market| %>
     <div class="card-trip">
-
-      <%# if market.photo.attached? %>
-        <%#= cl_image_tag(market.photo.key, width: 400, height: 300, crop: :fill) %>
-      <%# elsif market.avatar? %>
-        <%#= image_tag(market.avatar, width: 400, height: 300, crop: :fill)  %>
-      <%# end %>
-      <%# <div class="card-location"> %>
-        <%# <a href="#"><i class="fas FA-map-marker-alt"></i>  0.3 km</a> %>
-      <%# </div> %>
-
-      <%# placeholder image %>
       <%= image_tag "#{market.image}" %>
-      <%# placeholder image %>
       <div class="card-trip-infos">
         <div class="card-title">
           <h3 class="title-link"><%= link_to market.title, market_path(market) %></h3>
@@ -56,11 +44,5 @@
     <% end  %>
   </div>
   </div>
+  </div>
 </div>
-</div>
-<%# For editing offers/requests  %>
-    <%# <% @markets.each do |market| %>
-      <%# <% if policy(market).edit? %>
-        <%# <%= link_to "Update", edit_market_path(market) %>
-      <%# <% end %>
-    <%# <% end %>
