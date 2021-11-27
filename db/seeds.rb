@@ -126,7 +126,7 @@ rory = User.create(
 puts "Created #{rory.email}"
 
 mathew = User.create(
-  email: "mathew@Hanna.com",
+  email: "mathew@hanna.com",
   first_name: "Mathew",
   last_name: "Hanna",
   password: '123456',
