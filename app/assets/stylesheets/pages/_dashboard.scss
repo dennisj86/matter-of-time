@@ -73,10 +73,12 @@ padding-bottom: 8px;
   background-color: $pink;
   margin: 8px;
   padding: 12px;
+  //width: 60%;
 }
 
 .messages{
 margin: 12px;
+// display: flex;
 display: grid;
 grid-template-columns: 1fr;
 overflow: auto;
