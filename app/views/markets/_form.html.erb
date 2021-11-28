@@ -17,6 +17,7 @@
         <%= f.input :category, collection: %w[Animals Music Plants Handywork Concerts Transportation Crafts Sports Education Circus Film&Photography Baking&Cooking] %>
         <p><%= f.label :photo %></p>
         <p><%= f.file_field :photo, multiple: false, direct_upload: true %></p>
+        <%#<p><%= f.file_field :photo, multiple: false, direct_upload: true </p> %>
       </div>
 
       <div class="form-actions btn-solid-red">

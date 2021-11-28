@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   def index
     @user = current_user
-    @bookings = policy_scope(Booking)
+    @bookings = policy_scope(Booking).order(updated_at: :desc)
     @booking = Booking.find(params[:booking_id])
     @message_read = Message.where("booking_id = #{@booking.id} AND user_id != #{@user.id}")
     @message_read.each do |message|
@@ -12,15 +12,19 @@ class MessagesController < ApplicationController
   end
 
   def create
+    @bookings = policy_scope(Booking).order(updated_at: :desc)
     @booking = Booking.find(params[:booking_id])
     @message = Message.new(message_params)
     @message.booking = @booking
     @message.user = current_user
     authorize @message
     if @message.save
+      @booking.updated_at = @message.created_at
+      @booking.save
       BookingChannel.broadcast_to(
         @booking,
-        render_to_string(partial: "message", locals: { message: @message})
+        messages_partial: render_to_string(partial: "message", locals: { message: @message}),
+        bookings_partial: render_to_string(partial: "bookings", locals: { bookings: @bookings})
       )
 
       redirect_to booking_messages_path(@booking)
