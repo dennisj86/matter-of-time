@@ -14,10 +14,12 @@
   padding-top: 24px;
 
 }
- .large-image > img {
-  height: 300px;
+ .large-image {
+  img {
+  height: 400px;
   width: 100%;
   object-fit: cover;
+  }
  }
 
  .short-info {
