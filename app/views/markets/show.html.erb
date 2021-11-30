@@ -3,7 +3,11 @@
 
     <div class="card-images">
       <div class="large-image">
+      <% if @market.photo.attached? %>
+        <%= cl_image_tag "#{@market.photo.key}" %>
+      <% else %>
         <%= image_tag "#{@market.image}" %>
+      <% end %>
       </div>
     </div>
 
@@ -19,7 +23,7 @@
         <% if @booking.present? %>
           <div>
             <h5>You have already requested a booking.</h5>
-            <p>Please move to <%= link_to "dashboard", booking_messages_path %> to view your messages.</p>
+            <p>Please move to <%= link_to "dashboard", booking_messages_path(@booking) %> to view your messages.</p>
           </div>
         <% else %>
           <button type="button" class="btn-solid-red" data-toggle="modal" data-target="#exampleModal">

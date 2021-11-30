@@ -22,14 +22,13 @@
           <%= image_tag "#{market.image}" %>
           <div class="card-trip-infos">
             <div class= "card-title">
-              <%= link_to market.title, market_path(market) %>
-              <h3>Time Here</h3>
+              <div class="title-link"><%= link_to market.title, market_path(market) %></div>
             </div>
             <div>
               <i class="fas fa-heart card-trip-user"></i>
               <p><%= market.description %></p>
             </div>
-            <%= button_to "See Details", market_path(market), :class => "btn-line-red", :method => :get %>
+            <%= button_to "See Details", market_path(market), :class => "btn-line-red card-btn", :method => :get %>
             <br>
           </div>
         </div>
@@ -51,8 +50,8 @@
     <div class="description">
       <div class="details text-left">
         <h2>Take a look at our offers</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
-        <div> <%= link_to "Explore", "#", class: "btn-line-red" %></div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p><br>
+        <div id="landing-button"> <%= link_to "Explore", "#", class: "btn-line-red" %></div>
       </div>
       <div class="">
         <%= image_tag "master-of-time.png" %>
