@@ -28,7 +28,6 @@ class MarketsController < ApplicationController
     authorize @market
     @market.user_id = current_user.id
     @market.offer_request = 0
-    @market.save!
     if @market.save
       redirect_to market_path(@market)
     else
