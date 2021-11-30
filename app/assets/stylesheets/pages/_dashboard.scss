@@ -15,11 +15,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  color: #00000070;
 }
 
 .message-preview{
-  width: 400px;
+  width: 500px;
   border-bottom-width: .75px;
   border-bottom-color: rgb(105, 105, 105);
   border-bottom-style: solid;
@@ -29,6 +29,7 @@
 
 .message-title {
   font-weight: bold;
+  //color: $red-orange;
 }
 
 .message-overview{
@@ -62,7 +63,7 @@ padding-bottom: 8px;
   background-color: $light-blue;
   margin: 8px;
   padding: 12px;
-  //width: 60%;
+  width: 60%;
 }
 
 #chat-left {
@@ -73,7 +74,8 @@ padding-bottom: 8px;
   background-color: $pink;
   margin: 8px;
   padding: 12px;
-  //width: 60%;
+  width: 60%;
+  margin-left: 200px;
 }
 
 .messages{
@@ -89,9 +91,15 @@ overflow: auto;
 }
 
 .handshake {
- padding: 12px;
  display: flex;
- justify-content: space-around;
+ justify-content: space-evenly;
+  a{
+    margin: 0px !important;
+    p{
+      padding: 0px;
+      margin: 0px;
+    }
+  }
 }
 
 .message-form {
@@ -107,4 +115,17 @@ overflow: auto;
 .message-input {
   padding: 20px;
   border: 3px !important;
+}
+
+.message-time {
+  color: #00000050;
+}
+
+.user-name {
+  color: #00000070;
+  font-weight: bold;
+}
+
+.message-content{
+  //margin-bottom: 8px;
 }

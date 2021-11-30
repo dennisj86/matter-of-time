@@ -24,15 +24,15 @@
 
 
         <div class="messages">
-          <%= f.input :content, label: false, class:"message-input", placeholder: "Start to chat!" %>
+          <%= f.input :content, label: false, class:"message-input", placeholder: "Write your message here!" %>
         </div>
         <div class="handshake">
           <% if current_user == @booking.market.user %>
-          <%= link_to booking_path(@booking), class: "btn-solid-red", method: :patch do %>
-            <i class="fas fa-hands-helping btn-solid-red"> Handshake</i>
+           <%= link_to "Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
           <% end %>
-          <% end %>
-          <%= f.button :submit, class: 'btn-line-red'  %>
+
+
+          <%= f.button :submit, "Send Message", class: 'btn-line-red'  %>
         </div>
       <% end %>
     </div>
