@@ -22,13 +22,17 @@
           <%#%= f.button :submit, class: 'btn-line-red'  %>
         <%#/div> %>
 
-
-        <div class="messages">
-          <%= f.input :content, label: false, class:"message-input", placeholder: "Write your message here!" %>
-        </div>
-        <div class="handshake">
-          <%= link_to "Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
-          <%= f.button :submit, "Send Message", class: 'btn-line-red'  %>
+        <div>
+          <div class="messages">
+            <%= f.input :content, label: false, class:"message-input", placeholder: "Write your message here!" %>
+          </div>
+          <div class="handshake">
+            <%= link_to "Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
+            <%= f.button :submit, "Send Message", class: 'btn-line-red'  %>
+          </div>
+          <div class="handshake-explenation">
+           <p><strong>How the handshake works: </strong>If you both agree on the conditions the offer creator can handshake on the deal to mark it as set.</p>
+          </div>
         </div>
       <% end %>
     </div>
