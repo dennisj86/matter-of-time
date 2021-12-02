@@ -23,8 +23,9 @@
             <%#= cl_image_tag @user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <%# else  %>
 
-            <%= link_to "You've got #{current_user.unread_messages.count} unread messages", "/bookings", class: "dropdown-item" %>
               <%= image_tag "#{@user.avatar}", class: "avatar dropdown-toggle login-img", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= link_to "#{current_user.unread_messages.count}", "/bookings", class:"unread" %>
+
             <%# end %>
             <li class="nav-item dropdown login-dd">
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

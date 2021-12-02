@@ -6,6 +6,7 @@
   left: 0;
   top: 0;
   z-index: 1030;
+
 }
 
 .navbar-lewagon {
@@ -39,8 +40,28 @@
     position: absolute;
     top: 15px;
 }
+
+.unread{
+  border-radius: 50%;
+  border-width: 1px;
+  background-color: $red-orange;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: white ;
+}
+
+.unread:hover{
+    text-decoration: none;
+    color: white;
+}
+
 .login-img {
-    right: 1vw;
+    right: 1.8vw;
     position: absolute;
     top: 1vh;
 }

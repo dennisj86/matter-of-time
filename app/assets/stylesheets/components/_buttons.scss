@@ -39,6 +39,11 @@
   color: white;
 }
 
+.btn-solid-red-handshake:hover{
+  color: white;
+  text-decoration: none;
+}
+
 .btn-solid-red-message{
   padding: 8px 24px;
   border-radius: 20px;
@@ -46,4 +51,9 @@
   background-color: $red-orange;
   color: white;
   border-width: 0px;
+}
+
+.btn-solid-red-message:hover{
+  color: white;
+  text-decoration: none;
 }
