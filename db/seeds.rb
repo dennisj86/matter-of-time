@@ -220,7 +220,7 @@ offer_2 = {
   offer_request: 0,
   user_id: steven.id,
   remote: 1,
-  image: "dog1.jpg",
+  image: "walking-dog.jpg",
   time: 45,
   location: "",
 }
@@ -244,7 +244,7 @@ offer_4 = {
   offer_request: 0,
   user_id: andrew.id,
   remote: 1,
-  image: "gardening.jpg",
+  image: "outdoor-gardening.jpg",
   time: 45,
   location: "Hamburg",
 }
@@ -322,6 +322,7 @@ offer_10 = {
   time: 90,
   location: "Mainz",
 }
+
 
 [offer_1, offer_2, offer_3, offer_4, offer_5, offer_6, offer_7, offer_8, offer_9, offer_10].each { |offer|
   market = Market.create!(offer)
