@@ -21,16 +21,22 @@ justify-content: center;
 
 .banner-text h1{
   color: $mid-blue;
-  font-size: 3.2rem;
+  font-size: 4.6rem;
   //padding-top: 400px;
-  margin-top: 340px;
+  margin-top: 220px;
   margin-bottom: 20px;
 }
+
+.banner-text   h2{
+    color: rgb(4, 6, 76);
+    padding-bottom: 16px;
+    font-size: 1.2rem;
+  }
 
 .filter-links {
   font-size: 0.8rem;
   font-weight: bold;
-  padding-right: 50px;
+  //padding-right: 50px;
 }
 
 .filter-links:hover{
@@ -39,10 +45,11 @@ justify-content: center;
 }
 
 .filter-container{
-
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 60px;
+  margin-left: 260px;
+  margin-right: 260px;
 }
 
 .banner-content {
@@ -94,6 +101,7 @@ justify-content: center;
   margin-top: 10px;
   margin-bottom: 20px;
   //padding-bottom: 5vh;
+  color: rgb(4, 6, 76);
 }
 
 .headline h2 {

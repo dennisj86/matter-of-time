@@ -323,7 +323,42 @@ offer_10 = {
   location: "Mainz",
 }
 
-[offer_1, offer_2, offer_3, offer_4, offer_5, offer_6, offer_7, offer_8, offer_9, offer_10].each { |offer|
+offer_11 = {
+  category: 'Music',
+  title: "Beginner Piano Lessons",
+  description: 'I have a 5 year old daughter that wants to learn the piano.',
+  offer_request: 0,
+  user_id: john.id,
+  remote: 1,
+  image: "headphones.jpg",
+  time: 60,
+  location: "Berlin",
+}
+
+offer_12 = {
+  category: 'Handywork',
+  title: "Your flat is a mess?",
+  description: 'We are 4 mamaboi-students sharing a flat and need help keeping our cave tidy.',
+  offer_request: 0,
+  user_id: johannes.id,
+  remote: 1,
+  image: "the-carpenter-works-with-a-tree",
+  time: 60,
+  location: "Berlin",
+}
+
+offer_13 = {
+  category: 'Education',
+  title: "Looking for help with homeschooling?",
+  description: 'My 14 year-old son needs help with homeschooling in math and physics during lockdown',
+  offer_request: 0,
+  user_id: steven.id,
+  remote: 1,
+  image: "two-kids-using-laptop-during-lesson.jpg",
+  time: 60,
+  location: "Kiel",
+
+[offer_1, offer_2, offer_3, offer_4, offer_5, offer_6, offer_7, offer_8, offer_9, offer_10, offer_11, offer_12, offer_13].each { |offer|
   market = Market.create!(offer)
   puts "Created #{market.title}"
 }
