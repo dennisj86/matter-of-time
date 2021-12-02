@@ -208,7 +208,7 @@ offer_1 = {
   offer_request: 0,
   user_id: thomas.id,
   remote: 0,
-  image: "close-up-image-of-programer-working-at-his-desk-in-office",
+  image: "java.jpg",
   time: 60,
   location: "Hamburg",
 }
@@ -350,7 +350,7 @@ request_2 = {
   offer_request: 1,
   user_id: johannes.id,
   remote: 1,
-  image: "the-carpenter-works-with-a-tree",
+  image: "the-carpenter-works-with-a-tree.jpg",
   time: 60,
   location: "Berlin",
 }
