@@ -208,7 +208,7 @@ offer_1 = {
   offer_request: 0,
   user_id: thomas.id,
   remote: 0,
-  image: "java.jpg",
+  image: "close-up-image-of-programer-working-at-his-desk-in-office",
   time: 60,
   location: "Hamburg",
 }
@@ -252,8 +252,8 @@ offer_4 = {
 offer_5 = {
   category: 'Crafts',
   title: "How to make the ceramics",
-  description: 'Ask me anything about ceramics. I have over 20 years of experience with makes my own ceramics. I can help you with your struggles that need to be mastered in the beginning.
-                If you haven’t started yet I can help you find the right tools and help you avoid unnecessary purchases. ',
+  description: "Ask me anything about ceramics. I have over 20 years of experience with makes my own ceramics. I can help you with your struggles that need to be mastered in the beginning.
+                If you haven't started yet I can help you find the right tools and help you avoid unnecessary purchases. ",
   offer_request: 0,
   user_id: kathrine.id,
   remote: 1,
@@ -263,7 +263,7 @@ offer_5 = {
 }
 
 offer_6 = {
-  category: 'Education',
+  category: "Education",
   title: "Want to change your life?",
   description: 'Then start to code. I have been through that journey. Was sick of my old career and was in need for a change. With basically no coding experience I started my journey to become a great programmer with a perspective and flexibility to work and enjoy my life.',
   offer_request: 0,
@@ -277,8 +277,8 @@ offer_6 = {
 offer_7 = {
   category: 'Education',
   title: "Math problems? No worries! ",
-  description: 'Especially during the pandemic it was hard for kids to keep up with the school work and working parents just don’t have the time to study with their kid.
-  I am a retired school teacher that wants to help families that don’t have the money to pay for tutoring.',
+  description: "Especially during the pandemic it was hard for kids to keep up with the school work and working parents just don't have the time to study with their kid.
+  I am a retired school teacher that wants to help families that don't have the money to pay for tutoring.",
   offer_request: 0,
   user_id: mary.id,
   remote: 1,
@@ -290,7 +290,7 @@ offer_7 = {
 offer_8 = {
   category: 'Plants',
   title: "All your plants are dying?",
-  description: 'Not anymore! I will help you stop killing all your plants and it’s not that hard.',
+  description: "Not anymore! I will help you stop killing all your plants and it's not that hard.",
   offer_request: 0,
   user_id: mathew.id,
   remote: 1,
@@ -323,42 +323,8 @@ offer_10 = {
   location: "Mainz",
 }
 
-offer_11 = {
-  category: 'Music',
-  title: "Beginner Piano Lessons",
-  description: 'I have a 5 year old daughter that wants to learn the piano.',
-  offer_request: 0,
-  user_id: john.id,
-  remote: 1,
-  image: "headphones.jpg",
-  time: 60,
-  location: "Berlin",
-}
 
-offer_12 = {
-  category: 'Handywork',
-  title: "Your flat is a mess?",
-  description: 'We are 4 mamaboi-students sharing a flat and need help keeping our cave tidy.',
-  offer_request: 0,
-  user_id: johannes.id,
-  remote: 1,
-  image: "the-carpenter-works-with-a-tree.jpg",
-  time: 60,
-  location: "Berlin",
-}
-
-offer_13 = {
-  category: 'Education',
-  title: "Looking for help with homeschooling?",
-  description: 'My 14 year-old son needs help with homeschooling in math and physics during lockdown',
-  offer_request: 0,
-  user_id: steven.id,
-  remote: 1,
-  image: "two-kids-using-laptop-during-lesson.jpg",
-  time: 60,
-  location: "Kiel",
-
-[offer_1, offer_2, offer_3, offer_4, offer_5, offer_6, offer_7, offer_8, offer_9, offer_10, offer_11, offer_12, offer_13].each { |offer|
+[offer_1, offer_2, offer_3, offer_4, offer_5, offer_6, offer_7, offer_8, offer_9, offer_10].each { |offer|
   market = Market.create!(offer)
   puts "Created #{market.title}"
 }
@@ -384,7 +350,7 @@ request_2 = {
   offer_request: 1,
   user_id: johannes.id,
   remote: 1,
-  image: "the-carpenter-works-with-a-tree.jpg",
+  image: "the-carpenter-works-with-a-tree",
   time: 60,
   location: "Berlin",
 }
