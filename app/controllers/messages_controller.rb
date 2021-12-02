@@ -9,6 +9,7 @@ class MessagesController < ApplicationController
       message.save
     end
     @message = Message.new
+    @messages = @booking.messages.order(:id)
   end
 
   def create
