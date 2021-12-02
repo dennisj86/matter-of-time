@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
     @user = current_user
     @messages = @user.all_messages
     @bookings = policy_scope(Booking).order(updated_at: :desc)
+
   end
 
   def new
@@ -38,15 +39,26 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     authorize @booking
-    @booking.status = "confirmed"
+    case @booking.status
+    when "pending"
+      @booking.status = 1
+    when "requested"
+      @booking.status = 2
+    when "confirmed"
+      @booking.status = 3
+    when "rejected"
+      @booking.status = 2
+    end
     @booking.save
-    redirect_to booking_messages_path(@booking), notice: "Booking confirmed"
+    redirect_to booking_messages_path(@booking), notice: "Booking #{@booking.status}"
   end
 
   def destroy
+
     @booking = Booking.find(params[:id])
+    authorize @booking
     @booking.destroy
-    redirect_to dashboard_index_path(@user.id)
+    redirect_to "/bookings"
   end
 
   private
