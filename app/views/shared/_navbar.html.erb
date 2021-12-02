@@ -16,9 +16,7 @@
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
           <li class="nav-list pr-2">
-            <% if policy(Market).create? %>
-              <%= link_to "New offer/request", new_market_path %>
-            <% end %>
+
           </li>
 
           <%# if @user.photo.attached? %>

@@ -15,20 +15,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  color: #00000070;
 }
 
 .message-preview{
-  width: 400px;
+  width: 470px;
   border-bottom-width: .75px;
   border-bottom-color: rgb(105, 105, 105);
   border-bottom-style: solid;
   padding: 8px;
   margin: 8px;
+  display: flex;
+  align-content: center;
 }
 
 .message-title {
   font-weight: bold;
+  padding-left: 16px;
+  //color: $red-orange;
 }
 
 .message-overview{
@@ -53,15 +57,34 @@ padding-bottom: 8px;
   display: flex;
   flex-direction: column;
   margin: 8px;
+  justify-content: space-between;
 }
 #chat-right {
-  text-align: right !important;
-}
-#chat-left {
   text-align: left !important;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #9EB7E060;
+  margin: 8px;
+  padding: 12px;
+  width: 60%;
 }
+
+#chat-left {
+  text-align: right !important;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: #FCE7E990;
+  margin: 8px;
+  padding: 12px;
+  width: 60%;
+  margin-left: 200px;
+}
+
 .messages{
 margin: 12px;
+// display: flex;
 display: grid;
 grid-template-columns: 1fr;
 overflow: auto;
@@ -72,9 +95,15 @@ overflow: auto;
 }
 
 .handshake {
- padding: 12px;
  display: flex;
- justify-content: space-around;
+ justify-content: space-evenly;
+  a{
+    margin: 0px !important;
+    p{
+      padding: 0px;
+      margin: 0px;
+    }
+  }
 }
 
 .message-form {
@@ -85,4 +114,56 @@ overflow: auto;
   border-style: solid;
   padding: 12px;
   margin: 12px;
+}
+
+.message-input {
+  padding: 20px;
+  border: 3px !important;
+}
+
+.message-time {
+  color: #00000050;
+}
+
+.user-name {
+  color: #00000070;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+.message-content{
+  //margin-bottom: 8px;
+}
+
+.handshake-explenation{
+  p{
+    font-size: 9.5px;
+    color: #00000060;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    //padding-bottom: 8px;
+    text-align: center;
+  }
+}
+
+.message-image{
+  img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+  }
+}
+
+.date{
+  text-align: right;
+  padding-left: 100px;
+}
+
+.user{
+  width: 150px;
+  padding-bottom: 8px;
+  color: #00000060;
+  padding-left: 16px;
 }

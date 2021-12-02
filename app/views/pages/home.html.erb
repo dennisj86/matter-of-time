@@ -1,12 +1,13 @@
-<div class="banner banner-content animate__animated animate__fadeIn animate__slower" id="banner-img">
-  <div class="banner-text">
-    <div><h1>Some catchy phrase <br>to get the users <br>attention.</h1></div>
+<div class="banner banner-content " id="banner-img">
+  <div class="banner-text animate__animated animate__fadeIn animate__slower">
+    <h1>Swap time <br>for time</h1>
+    <h2>Earn knowledge and good karma.</h2>
     <div class= "animate__animated animate__shakeX animate__delay-5s"><%= link_to "Search", "/markets", class: "btn-solid-red" %></div>
   </div>
-
+  <div><i class="fas fa-chevron-down chevron animate__animated animate__bounce animate__slow animate__infinite"></i></div>
   <div class="container">
     <div class="headline">
-      <h2 class= "">Discover our wonderful offers</h2>
+      <h2>Discover our wonderful offers</h2>
     </div>
     <div class="filter-container">
       <%= link_to "Remote", "#", class: "filter-links" %>
@@ -22,14 +23,13 @@
           <%= image_tag "#{market.image}" %>
           <div class="card-trip-infos">
             <div class= "card-title">
-              <%= link_to market.title, market_path(market) %>
-              <h3>Time Here</h3>
+              <div class="title-link"><%= link_to market.title, market_path(market) %></div>
             </div>
             <div>
               <i class="fas fa-heart card-trip-user"></i>
-              <p><%= market.description %></p>
+              <%# <p><%= market.description %></p>
             </div>
-            <%= button_to "See Details", market_path(market), :class => "btn-line-red", :method => :get %>
+            <%= button_to "See Details", market_path(market), :class => "btn-line-red card-btn", :method => :get %>
             <br>
           </div>
         </div>
@@ -51,8 +51,8 @@
     <div class="description">
       <div class="details text-left">
         <h2>Take a look at our offers</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
-        <div class="center-btn"> <%= link_to "Explore", "#", class: "btn-line-red" %></div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p><br>
+        <div id="landing-button"> <%= link_to "Explore", "#", class: "btn-line-red" %></div>
       </div>
       <div class="">
         <%= image_tag "master-of-time.png" %>

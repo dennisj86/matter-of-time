@@ -30,8 +30,20 @@
   color: $red-orange;
 }
 
-.center-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn-solid-red-handshake{
+  //background: url('');
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: $red-orange;
+  color: white;
+}
+
+.btn-solid-red-message{
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: $red-orange;
+  color: white;
+  border-width: 0px;
 }

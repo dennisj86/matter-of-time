@@ -13,16 +13,32 @@
       </div>
 
       <%= simple_form_for [ @booking, @message ], remote: true do |f| %>
-        <%= f.input :content, label: false, placeholder: "Start to chat!" %>
 
-      <div class="handshake">
-        <%= link_to "#" do %>
-            <i class="fas fa-hands-helping btn-solid-red"> Handshake</i>
-        <% end %>
-        <%= f.button :submit, class: 'btn-line-red'  %>
-      </div>
+        <%#= f.input :content, label: false, placeholder: "Start to chat!" %>
+        <%#div class="handshake">
+          <%= link_to booking_path(@booking), method: :patch do %>
+            <%#i class="fas fa-hands-helping btn-solid-red"> Handshake</i>
+          <% end %>
+          <%#%= f.button :submit, class: 'btn-line-red'  %>
+        <%#/div> %>
+
+        <div>
+
+        <div class="messages">
+          <%= f.input :content, label: false, class:"message-input", placeholder: "Write your message here!" %>
+        </div>
+        <div class="handshake">
+          <% if current_user == @booking.market.user %>
+           <%= link_to "Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
+          <% end %>
+
+
+          <%= f.button :submit, "Send Message", class: 'btn-line-red'  %>
+        </div>
+        <div class="handshake-explenation">
+           <p><strong>How the handshake works: </strong>If you both agree on the conditions the offer creator can handshake on the deal to mark it as set.</p>
+        </div>
       <% end %>
-    </div>
     </div>
   </div>
 </div>

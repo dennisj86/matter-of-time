@@ -1,31 +1,33 @@
 <div class="container">
   <div class="login-signup">
     <div class="sign-up">
-    <h2>Create your offer</h2>
+    <h2>Create your own offer</h2>
 
     <%= simple_form_for(@market) do |f| %>
       <div class="form-inputs">
         <%= f.input :title,
                     required: false,
                     autofocus: true,
-                    input_html: { placeholder: "Offer title" } %>
+                    input_html: { placeholder: "Write you title here" } %>
         <p><%= f.label :description %></p>
         <%= f.text_area :description,
+                    class: "form-description",
                     required: false,
                     autofocus: true,
-                    input_html: { placeholder: "Describe your offer" } %>
+                    input_html: { placeholder: "Describe your offer here" } %>
         <%= f.input :category, collection: %w[Animals Music Plants Handywork Concerts Transportation Crafts Sports Education Circus Film&Photography Baking&Cooking] %>
-        <p><%= f.label :photo %></p>
-        <p><%= f.file_field :photo, multiple: false, direct_upload: true %></p>
+        <%# <p><%= f.label :photo %></p>
+        <p><%= f.file_field :photo,  multiple: false, class: "", direct_upload: true %></p>
+        <%#<p><%= f.file_field :photo, multiple: false, direct_upload: true </p> %>
       </div>
 
-      <div class="form-actions btn-solid-red">
+      <div class="form-actions btn-solid-red offer-submit">
         <%#= link_to 'Create Offer', market_path(@market) %>
         <%= f.button :submit, "Create Offer" %>
       </div>
     <% end %>
       </div>
-      <div class="">
+      <div class="form-image">
         <%= image_tag "master-of-time.png" %>
       </div>
    </div>
