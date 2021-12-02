@@ -16,15 +16,16 @@ justify-content: center;
   padding-left: 12vw;
   display: flex;
   flex-direction: column;
-  margin-top: 60vh;
+
 }
 
 .banner-text h1{
   color: $mid-blue;
   font-size: 4.6rem;
   //padding-top: 400px;
-  margin-top: 220px;
+  //margin-top: 220px;
   margin-bottom: 20px;
+  margin-top: 100vh;
 }
 
 .banner-text   h2{
@@ -110,4 +111,14 @@ justify-content: center;
 
 #landing-button{
   padding-top: 24px;
+}
+
+.chevron {
+    margin-top: 220px;
+    display: block;
+    // -webkit-animation: pulse 2s infinite;
+    // animation: pulse 2s infinite;
+    color: $red-orange;
+    text-align: center;
+    font-size: 3rem;
 }
