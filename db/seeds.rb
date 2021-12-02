@@ -220,7 +220,7 @@ offer_2 = {
   offer_request: 0,
   user_id: steven.id,
   remote: 1,
-  image: "dog1.jpg",
+  image: "walking-dog.jpg",
   time: 45,
   location: "",
 }
@@ -244,7 +244,7 @@ offer_4 = {
   offer_request: 0,
   user_id: andrew.id,
   remote: 1,
-  image: "gardening.jpg",
+  image: "outdoor-gardening.jpg",
   time: 45,
   location: "Hamburg",
 }

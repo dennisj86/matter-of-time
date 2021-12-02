@@ -1,7 +1,7 @@
 .show-card{
   padding-top: 25vh;
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   align-content: flex-start;
 }
 
@@ -17,7 +17,7 @@
  .large-image {
   img {
   height: 400px;
-  width: 100%;
+  width: 600px;
   object-fit: cover;
   }
  }
@@ -38,6 +38,39 @@
    text-align: left !important;
  }
 
- i {
-   padding: 0px;
+
+ .save-icon{
+   a{
+     color: rgba(234, 127, 116, 0.5);
+     font-size: 24px;
+     padding-left: 150px;
+     padding-right: 0px;
+    }
  }
+
+.modal-body{
+  background-color: rgba(203, 214, 233, 0.7);
+  height: 150px;
+}
+
+.modal-header{
+  background-color: rgba(203, 214, 233, 0.7);
+  border-top-left-radius: 15px;
+}
+
+.modal-footer{
+  background-color: rgba(203, 214, 233, 0.7);
+}
+
+.modal-dialog{
+  padding-top: 150px;
+}
+
+#message-text{
+  height: 120px;
+}
+
+#like{
+  display: flex;
+  justify-content: space-between;
+}
