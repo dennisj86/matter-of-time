@@ -208,7 +208,7 @@ offer_1 = {
   offer_request: 0,
   user_id: thomas.id,
   remote: 0,
-  image: "close-up-image-of-programer-working-at-his-desk-in-office",
+  image: "java.jpg",
   time: 60,
   location: "Hamburg",
 }
@@ -252,8 +252,8 @@ offer_4 = {
 offer_5 = {
   category: 'Crafts',
   title: "How to make the ceramics",
-  description: 'Ask me anything about ceramics. I have over 20 years of experience with makes my own ceramics. I can help you with your struggles that need to be mastered in the beginning.
-                If you haven’t started yet I can help you find the right tools and help you avoid unnecessary purchases. ',
+  description: "Ask me anything about ceramics. I have over 20 years of experience with makes my own ceramics. I can help you with your struggles that need to be mastered in the beginning.
+                If you haven't started yet I can help you find the right tools and help you avoid unnecessary purchases. ",
   offer_request: 0,
   user_id: kathrine.id,
   remote: 1,
@@ -263,7 +263,7 @@ offer_5 = {
 }
 
 offer_6 = {
-  category: 'Education',
+  category: "Education",
   title: "Want to change your life?",
   description: 'Then start to code. I have been through that journey. Was sick of my old career and was in need for a change. With basically no coding experience I started my journey to become a great programmer with a perspective and flexibility to work and enjoy my life.',
   offer_request: 0,
@@ -277,8 +277,8 @@ offer_6 = {
 offer_7 = {
   category: 'Education',
   title: "Math problems? No worries! ",
-  description: 'Especially during the pandemic it was hard for kids to keep up with the school work and working parents just don’t have the time to study with their kid.
-  I am a retired school teacher that wants to help families that don’t have the money to pay for tutoring.',
+  description: "Especially during the pandemic it was hard for kids to keep up with the school work and working parents just don't have the time to study with their kid.
+  I am a retired school teacher that wants to help families that don't have the money to pay for tutoring.",
   offer_request: 0,
   user_id: mary.id,
   remote: 1,
@@ -290,7 +290,7 @@ offer_7 = {
 offer_8 = {
   category: 'Plants',
   title: "All your plants are dying?",
-  description: 'Not anymore! I will help you stop killing all your plants and it’s not that hard.',
+  description: "Not anymore! I will help you stop killing all your plants and it's not that hard.",
   offer_request: 0,
   user_id: mathew.id,
   remote: 1,
@@ -350,7 +350,7 @@ request_2 = {
   offer_request: 1,
   user_id: johannes.id,
   remote: 1,
-  image: "the-carpenter-works-with-a-tree",
+  image: "the-carpenter-works-with-a-tree.jpg",
   time: 60,
   location: "Berlin",
 }

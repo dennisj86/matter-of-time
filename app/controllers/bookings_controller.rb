@@ -42,12 +42,10 @@ class BookingsController < ApplicationController
     case @booking.status
     when "pending"
       @booking.status = 1
-    when "requested"
+    when "requested" || "rejected"
       @booking.status = 2
     when "confirmed"
       @booking.status = 3
-    when "rejected"
-      @booking.status = 2
     end
     @booking.save
     redirect_to booking_messages_path(@booking), notice: "Booking #{@booking.status}"

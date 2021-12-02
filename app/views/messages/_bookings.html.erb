@@ -6,7 +6,7 @@
     <div>
       <div class="user-info">
         <div class="user"><%= link_to booking.user.first_name, booking_messages_path(booking.id) %></div>
-        <div class="date"><%= booking.created_at %></div>
+        <div class="date"><%= booking.updated_at.strftime("%a %b %e at %l:%M%p") %></div>
       </div>
       <div class="message-title"> <%= booking.market.title %> </div>
     </div>
