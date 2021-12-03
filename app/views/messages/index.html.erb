@@ -36,7 +36,7 @@
           <% elsif current_user == @booking.user && @booking.status == "requested"  %>
             <%= link_to "Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
           <% elsif @booking.status == "confirmed" %>
-            <%= link_to "Go back on your word!! (bad manner!!)", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
+            <%= link_to "Change Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
           <% elsif @booking.status == "rejected"  %>
             <p><strong>Handshake canceled. </strong></p>
             <%= link_to "redo Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
