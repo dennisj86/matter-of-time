@@ -5,7 +5,7 @@
       <%= render 'bookings', bookings: @bookings %>
     </div>
     <div class="chat" >
-      <div><%= @booking.market.title %></div>
+      <div class="chat-title"><%= @booking.market.title %></div>
       <div class="messages"  id='messages'  data-booking-id="<%= @booking.id %>" >
         <% @messages.each do |message| %>
         <%= render 'message', message: message %>
@@ -30,17 +30,17 @@
         </div>
         <div class="handshake">
           <% if current_user == @booking.market.user && @booking.status == "pending" %>
-           <%= link_to "Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
+           <%= link_to "Send Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
           <% elsif current_user == @booking.user && @booking.status == "pending" %>
-            <p><strong>Awaiting Handshake </strong></p>
+            <p class="canceled"><strong>Awaiting Handshake </strong></p>
           <% elsif current_user == @booking.user && @booking.status == "requested"  %>
-            <%= link_to "Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
+            <%= link_to "Accept Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
           <% elsif @booking.status == "confirmed" %>
-            <%= link_to "Go back on your word!! (bad manner!!)", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
+            <%= link_to "Cancel Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
           <% elsif @booking.status == "rejected"  %>
-            <p><strong>Handshake canceled. </strong></p>
-            <%= link_to "redo Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
-            <%= link_to "delete Booking (and messages)", booking_path(@booking), class: "btn-solid-red-handshake", method: :delete %>
+            <p class="canceled"><strong>Handshake canceled</strong></p>
+            <%= link_to "Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
+            <%= link_to "Delete Chat", booking_path(@booking), class: "btn-solid-red-handshake", method: :delete %>
           <% end %>
 
 

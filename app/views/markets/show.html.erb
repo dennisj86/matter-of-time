@@ -19,7 +19,7 @@
         <% end %></div>
         <br>
       </div>
-      <i class="fas fa-map-marker-alt short-info"></i>  Friedrichstr. 31, 10732 Berlin <br>
+      <i class="fas fa-map-marker-alt short-info short-info-top"></i>  Friedrichstr. 31, 10732 Berlin <br>
       <i class="fas fa-clock short-info"></i>  60 Minutes<br>
       <i class="fas fa-user short-info"> </i>  <%= @market.user.first_name %> <%= @market.user.last_name %><br><br>
 
@@ -28,8 +28,8 @@
         <!-- Button trigger modal -->
         <% if @booking.present? %>
           <div>
-            <h5>You have already requested a booking.</h5>
-            <p>Please move to <%= link_to "dashboard", booking_messages_path(@booking) %> to view your messages.</p>
+            <p id="message_info">You have already send a message.</p>
+            <p><%= link_to "View your messages", booking_messages_path(@booking), class:"btn-line-red" %></p>
           </div>
         <% else %>
           <button type="button" class="btn-solid-red-message" data-toggle="modal" data-target="#exampleModal">
