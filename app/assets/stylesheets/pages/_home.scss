@@ -11,24 +11,13 @@
 }
 
 .banner-text {
-//  width: 80vw;
   padding-left: 12vw;
-  //margin-top: 80vh;
-  //margin-bottom: 50px;
-  //display: flex;
-  //flex-direction: column;
-  //transform: translate(40px, 250px);
   padding-top: 220px;
 }
 
 .banner-text h1{
   color: $mid-blue;
   font-size: 4.6rem;
-  //padding-top: 400px;
-  //margin-top: 220px;
-  //margin-bottom: 20px;
-  //margin-top: 250px;
-
 }
 
 .banner-text   h2{
@@ -40,7 +29,6 @@
 .filter-links {
   font-size: 0.8rem;
   font-weight: bold;
-  //padding-right: 50px;
 }
 
 .filter-links:hover{
@@ -51,7 +39,6 @@
 .filter-container{
   display: flex;
   justify-content: space-between;
-  //margin-bottom: 60px;
   margin-left: 260px;
   margin-right: 260px;
   margin-bottom: 30px;
@@ -82,7 +69,6 @@
   background-position: right;
   background-size: cover;
   padding-bottom: 160px;
-//  height: 120vh;
 }
 
 .description {
@@ -93,7 +79,6 @@
 
 .details {
   width: 30vw;
-  //padding-bottom: 35vh;
 }
 
 .text-left h2{
@@ -116,16 +101,11 @@
 
 .headline {
   margin-top: 50px;
-  //padding-bottom: 5vh;
   color: rgb(4, 6, 76);
 }
 
 .headline h2 {
   font-size: 2rem;
-}
-
-#landing-button{
-  //padding-top: 24px;
 }
 
 .chevron {
