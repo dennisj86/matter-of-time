@@ -20,7 +20,11 @@
       <% markets = Market.limit(4).order("RANDOM()") %>
       <% markets.each do |market| %>
         <div class="card-trip">
-          <%= image_tag "#{market.image}" %>
+         <% if market.photo.attached? %>
+        <%= cl_image_tag "#{market.photo.key}" %>
+        <% else %>
+        <%= image_tag "#{market.image}" %>
+      <% end %>
           <div class="card-trip-infos">
             <div class= "card-title">
               <div class="title-link"><%= link_to market.title, market_path(market) %></div>
