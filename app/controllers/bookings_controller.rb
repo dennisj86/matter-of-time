@@ -42,7 +42,7 @@ class BookingsController < ApplicationController
     case @booking.status
     when "pending"
       @booking.status = 1
-    when "requested" || "rejected"
+    when "requested", "rejected"
       @booking.status = 2
     when "confirmed"
       @booking.status = 3
