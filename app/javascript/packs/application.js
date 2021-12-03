@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("packs/video_call")
 
 
 
@@ -20,7 +21,8 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-
+import $ from 'jquery';
+window.jQuery = $; window.$ = $;
 // ----------------------------------------------------
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
@@ -40,4 +42,3 @@ document.addEventListener('turbolinks:load', () => {
 });
 
 import "controllers"
-
