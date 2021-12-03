@@ -79,7 +79,7 @@ padding-bottom: 8px;
   margin: 8px;
   padding: 12px;
   width: 60%;
-  margin-left: 200px;
+  margin-left: 225px;
 }
 
 .messages{
@@ -104,6 +104,12 @@ overflow: auto;
       margin: 0px;
     }
   }
+  align-items: center;
+}
+
+.canceled{
+  margin-top: 12px;
+  color: $red-orange;
 }
 
 .message-form {
@@ -166,4 +172,12 @@ overflow: auto;
   padding-bottom: 8px;
   color: #00000060;
   padding-left: 16px;
+}
+
+.chat-title {
+  text-align: center;
+  padding-top: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #00000070;
 }

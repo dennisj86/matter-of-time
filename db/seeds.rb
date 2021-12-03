@@ -269,7 +269,7 @@ offer_6 = {
   offer_request: 0,
   user_id: anne.id,
   remote: 1,
-  image: "java.jpg",
+  image: "programming.jpg",
   time: 60,
   location: "Duisburg",
 }
