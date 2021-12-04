@@ -37,6 +37,7 @@
             <%= link_to "Accept Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
           <% elsif @booking.status == "confirmed" %>
             <%= link_to "Cancel Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
+            <%= link_to "Go to video chat", "/rooms/4", class: "btn-solid-red-handshake"%>
           <% elsif @booking.status == "rejected"  %>
             <p class="canceled"><strong>Handshake canceled</strong></p>
             <%= link_to "Handshake", booking_path(@booking), class: "btn-solid-red-handshake", method: :patch %>
