@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("packs/video_call")
 
 
 
@@ -40,4 +41,3 @@ document.addEventListener('turbolinks:load', () => {
 });
 
 import "controllers"
-
